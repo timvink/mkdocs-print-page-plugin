@@ -17,7 +17,7 @@
         <meta name="author" content="Tim Vink">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
     
     
       
@@ -25,14 +25,14 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.b8ac9624.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.4dd2dd8d.min.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/palette.28f3ef9a.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.6a5ad368.min.css">
       
       
         
         
-        <meta name="theme-color" content="#3f51b5">
+        <meta name="theme-color" content="#4051b5">
       
     
     
@@ -273,7 +273,7 @@
             <p>This page combines all pages in the site. This makes it easy to print or export to PDF (<b>File > Print > Save as PDF</b>)</p>
             <p><em>This message will disappear when printing this page</em></p>
         </div>
-        <section class="print-page" id="index"><h1 id="index-mkdocs-print-page-plugin">mkdocs-print-page-plugin<a class="headerlink"  href="#index-mkdocs-print-page-plugin" title="Permanent link">&para;</a></h1>
+        <section class="print-page" id="index"><h1 id="index-mkdocs-print-site-plugin">mkdocs-print-site-plugin<a class="headerlink"  href="#index-mkdocs-print-site-plugin" title="Permanent link">&para;</a></h1>
 <p><a href="https://www.mkdocs.org/">MkDocs</a> plugin that adds a page to your site combining all pages, allowing your site visitors to <em>File &gt; Print &gt; Save as PDF</em> the entire site.</p>
 <h2 id="index-installation">Installation<a class="headerlink"  href="#index-installation" title="Permanent link">&para;</a></h2>
 <p>Install the plugin using <code>pip3</code>:</p>
@@ -293,13 +293,16 @@
 <p>You can customize the plugin by setting options in <code>mkdocs.yml</code>. For example:</p>
 <div class="highlight"><pre><span></span><code>plugins:
   - print-site:
-      add_to_navigation: false
+      add_to_navigation: true
+      print_page_title: &#39;Print Site&#39;
 </code></pre></div>
 
 <h2 id="options-add_to_navigation"><code>add_to_navigation</code><a class="headerlink"  href="#options-add_to_navigation" title="Permanent link">&para;</a></h2>
-<p>Default is <code>true</code>. Adds a link 'Print Site' to your site navigation.</p></section><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
+<p>Default is <code>true</code>. Adds a link 'Print Site' to your site navigation.</p>
+<h2 id="options-print_page_title"><code>print_page_title</code><a class="headerlink"  href="#options-print_page_title" title="Permanent link">&para;</a></h2>
+<p>Default is 'Print Site'. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</p></section><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
 <p>This content is here to demonstrate what it looks like while printing.</p>
-<p>Go ahead and visit the <a  href="#print_page">print page</a> and check it out!</p>
+<p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a  href="#print_page">print page</a> and check it out!</p>
 <h2 id="demo_content-links-to-other-pages">Links to other pages<a class="headerlink"  href="#demo_content-links-to-other-pages" title="Permanent link">&para;</a></h2>
 <p><code>mkdocs-print-site-plugin</code> will fix internal links when combining all the pages into one. Try navigating to other site pages using these internal links:</p>
 <ul>
@@ -467,7 +470,7 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 19.2c-2.5 0-4.71-1.28-6-3.2.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.232 7.232 0 01-6 3.2M12 5a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3m0-3A10 10 0 002 12a10 10 0 0010 10 10 10 0 0010-10c0-5.53-4.5-10-10-10z"/></svg></span> – <code>.icons/material/account-circle.svg</code></li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm141.4 389.4c-37.8 37.8-88 58.6-141.4 58.6s-103.6-20.8-141.4-58.6C68.8 359.6 48 309.4 48 256s20.8-103.6 58.6-141.4C144.4 76.8 194.6 56 248 56s103.6 20.8 141.4 58.6c37.8 37.8 58.6 88 58.6 141.4s-20.8 103.6-58.6 141.4zM328 164c-25.7 0-55.9 16.9-59.9 42.1-1.7 11.2 11.5 18.2 19.8 10.8l9.5-8.5c14.8-13.2 46.2-13.2 61 0l9.5 8.5c8.5 7.4 21.6.3 19.8-10.8-3.8-25.2-34-42.1-59.7-42.1zm-160 60c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm194.4 64H133.6c-8.2 0-14.5 7-13.5 15 7.5 59.2 58.9 105 121.1 105h13.6c62.2 0 113.6-45.8 121.1-105 1-8-5.3-15-13.5-15z"/></svg></span> – <code>.icons/fontawesome/regular/laugh-wink.svg</code></li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg></span> – <code>.icons/octicons/octoface-16.svg</code></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.326 1.973a1.2 1.2 0 011.49-.832c.387.112.977.307 1.575.602.586.291 1.243.71 1.7 1.296.022.027.042.056.061.084A13.22 13.22 0 018 3c.67 0 1.289.037 1.861.108l.051-.07c.457-.586 1.114-1.004 1.7-1.295a9.654 9.654 0 011.576-.602 1.2 1.2 0 011.49.832c.14.493.356 1.347.479 2.29.079.604.123 1.28.07 1.936.541.977.773 2.11.773 3.301C16 13 14.5 15 8 15s-8-2-8-5.5c0-1.034.238-2.128.795-3.117-.08-.712-.034-1.46.052-2.12.122-.943.34-1.797.479-2.29zM8 13.065c6 0 6.5-2 6-4.27C13.363 5.905 11.25 5 8 5s-5.363.904-6 3.796c-.5 2.27 0 4.27 6 4.27z"/><path d="M4 8a1 1 0 012 0v1a1 1 0 01-2 0V8zm2.078 2.492c-.083-.264.146-.492.422-.492h3c.276 0 .505.228.422.492C9.67 11.304 8.834 12 8 12c-.834 0-1.669-.696-1.922-1.508zM10 8a1 1 0 112 0v1a1 1 0 11-2 0V8z"/></svg></span> – <code>.icons/octicons/octoface-16.svg</code></li>
 <li><span class="twemoji medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"/></svg></span> – Medium</li>
 <li><span class="twemoji twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></span> – Twitter</li>
 <li><span class="twemoji facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></span> – Facebook</li>
@@ -530,7 +533,7 @@ Nullam dignissim ultrices urna non auctor.</p>
 \]</div>
 <p>The homomorphism <span class="arithmatex">\(f\)</span> is injective if and only if its kernel is only the 
 singleton set <span class="arithmatex">\(e_G\)</span>, because otherwise <span class="arithmatex">\(\exists a,b\in G\)</span> with <span class="arithmatex">\(a\neq b\)</span> such 
-that <span class="arithmatex">\(f(a)=f(b)\)</span>.</p>
+that <span class="arithmatex">\(f(a)=f(b)\)</span>00.</p>
 <h2 id="demo_content-dummy-section">Dummy section<a class="headerlink"  href="#demo_content-dummy-section" title="Permanent link">&para;</a></h2>
 <p>This section has an incoming anchor link, at the top of this page</p>
 <h2 id="demo_content-some-lorem-ipsum">Some <a href="https://www.lipsum.com/">lorem ipsum</a><a class="headerlink"  href="#demo_content-some-lorem-ipsum" title="Permanent link">&para;</a></h2>
@@ -643,15 +646,15 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#
       
     </div>
     
-      <script src="assets/javascripts/vendor.d1f5a259.min.js"></script>
-      <script src="assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: ".",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.fae956e7.min.js"
+            worker: "assets/javascripts/worker/search.5eca75d3.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
