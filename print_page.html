@@ -52,7 +52,9 @@
   
         <link href="/css/print_site.css" rel="stylesheet">
         <link href="/css/material.css" rel="stylesheet">
-        </head>
+        
+            <script type="text/javascript" src="/js/toc.js"></script>
+            </head>
   
   
     
@@ -269,11 +271,25 @@
                 
                 
         <div id="print-site-banner">
-            <h3>Print Site Page</h3>
+            <h13Print Site Page</h3>
+            <p>
+                <em>This box will disappear when printing</em>
+                <span style="float: right"><a href="https://timvink.github.io/mkdocs-print-site-plugin/">mkdocs-print-site-plugin</a></span>
+            </p>
             <p>This page combines all pages in the site. This makes it easy to print or export to PDF (<b>File > Print > Save as PDF</b>)</p>
-            <p><em>This message will disappear when printing this page</em></p>
         </div>
-        <section class="print-page" id="index"><h1 id="index-mkdocs-print-site-plugin">mkdocs-print-site-plugin<a class="headerlink"  href="#index-mkdocs-print-site-plugin" title="Permanent link">&para;</a></h1>
+        
+        <section class="print-page">
+            <div id="print-page-toc"></div>
+        </section>
+        <section class="print-page" id="index"><p><a href="https://github.com/timvink/mkdocs-print-site-plugin/actions"><img alt="Actions Status" src="https://github.com/timvink/mkdocs-print-site-plugin/workflows/pytest/badge.svg" /></a>
+<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/mkdocs-print-site-plugin" />
+<img alt="PyPI" src="https://img.shields.io/pypi/v/mkdocs-print-site-plugin" />
+<img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/mkdocs-print-site-plugin" />
+<a href="https://codecov.io/gh/timvink/mkdocs-print-site-plugin"><img alt="codecov" src="https://codecov.io/gh/timvink/mkdocs-print-site-plugin/branch/master/graph/badge.svg" /></a>
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/timvink/mkdocs-print-site-plugin" />
+<img alt="PyPI - License" src="https://img.shields.io/pypi/l/mkdocs-print-site-plugin" /></p>
+<h1 id="index-mkdocs-print-site-plugin">mkdocs-print-site-plugin<a class="headerlink"  href="#index-mkdocs-print-site-plugin" title="Permanent link">&para;</a></h1>
 <p><a href="https://www.mkdocs.org/">MkDocs</a> plugin that adds a page to your site combining all pages, allowing your site visitors to <em>File &gt; Print &gt; Save as PDF</em> the entire site.</p>
 <h2 id="index-installation">Installation<a class="headerlink"  href="#index-installation" title="Permanent link">&para;</a></h2>
 <p>Install the plugin using <code>pip3</code>:</p>
@@ -295,12 +311,15 @@
   - print-site:
       add_to_navigation: true
       print_page_title: &#39;Print Site&#39;
+      add_table_of_contents: true
 </code></pre></div>
 
 <h2 id="options-add_to_navigation"><code>add_to_navigation</code><a class="headerlink"  href="#options-add_to_navigation" title="Permanent link">&para;</a></h2>
 <p>Default is <code>true</code>. Adds a link 'Print Site' to your site navigation.</p>
 <h2 id="options-print_page_title"><code>print_page_title</code><a class="headerlink"  href="#options-print_page_title" title="Permanent link">&para;</a></h2>
-<p>Default is 'Print Site'. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</p></section><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
+<p>Default is 'Print Site'. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</p>
+<h2 id="options-add_table_of_contents"><code>add_table_of_contents</code><a class="headerlink"  href="#options-add_table_of_contents" title="Permanent link">&para;</a></h2>
+<p>Default is <code>true</code>. Adds a table of contents section at the beginning of the print page.</p></section><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
 <p>This content is here to demonstrate what it looks like while printing.</p>
 <p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a  href="#print_page">print page</a> and check it out!</p>
 <h2 id="demo_content-links-to-other-pages">Links to other pages<a class="headerlink"  href="#demo_content-links-to-other-pages" title="Permanent link">&para;</a></h2>
