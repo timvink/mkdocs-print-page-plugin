@@ -50,11 +50,9 @@
     
     
   
-        <link href="/css/print_site.css" rel="stylesheet">
-        <link href="/css/material.css" rel="stylesheet">
-        
-            <script type="text/javascript" src="/js/toc.js"></script>
-            </head>
+        <link href="css/print_site.css" rel="stylesheet">
+        <link href="css/print-site-material.css" rel="stylesheet">
+        </head>
   
   
     
@@ -238,10 +236,8 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
+  <li class="md-nav__item">
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
@@ -271,7 +267,6 @@
                 
                 
         <div id="print-site-banner">
-            <h13Print Site Page</h3>
             <p>
                 <em>This box will disappear when printing</em>
                 <span style="float: right"><a href="https://timvink.github.io/mkdocs-print-site-plugin/">mkdocs-print-site-plugin</a></span>
@@ -321,7 +316,7 @@
 <h2 id="options-add_table_of_contents"><code>add_table_of_contents</code><a class="headerlink"  href="#options-add_table_of_contents" title="Permanent link">&para;</a></h2>
 <p>Default is <code>true</code>. Adds a table of contents section at the beginning of the print page.</p></section><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
 <p>This content is here to demonstrate what it looks like while printing.</p>
-<p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a  href="#print_page">print page</a> and check it out!</p>
+<p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a  href="#print_page.md">print page</a> and check it out!</p>
 <h2 id="demo_content-links-to-other-pages">Links to other pages<a class="headerlink"  href="#demo_content-links-to-other-pages" title="Permanent link">&para;</a></h2>
 <p><code>mkdocs-print-site-plugin</code> will fix internal links when combining all the pages into one. Try navigating to other site pages using these internal links:</p>
 <ul>
@@ -624,27 +619,6 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="contributing.html" title="Contributing" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Contributing
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
-    </div>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -685,5 +659,9 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  
+            <script type="text/javascript" src="js/print-site-toc.js"></script>
+            
+            <script type="text/javascript" src="js/print-site-material.js"></script>
+            </body>
 </html>
