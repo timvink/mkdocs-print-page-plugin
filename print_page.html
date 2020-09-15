@@ -45,13 +45,15 @@
     
     
     
+      <link rel="stylesheet" href="css/print-site.css">
+    
+      <link rel="stylesheet" href="css/print-site-material.css">
+    
     
       
     
     
-  
-        <link href="css/print_site.css" rel="stylesheet"> 
-        </head>
+  </head>
   
   
     
@@ -264,7 +266,7 @@
                   
                 
                 
-                
+                <div id="print-site-page" class="print-site-enumerate-headings">
         <div id="print-site-banner">
             <p>
                 <em>This box will disappear when printing</em>
@@ -300,20 +302,26 @@
 <p>⚠️ Make sure to put <code>print-site</code> to the <strong>bottom</strong> of the plugin list. This is because other plugins might alter your site (like the navigation), and you want these changes included in the print page.</p>
 <p>If you have no <code>plugins</code> entry in your config file yet, you'll likely also want to add the <code>search</code> plugin. MkDocs enables it by default if there is no <code>plugins</code> entry set.</p>
 </blockquote></section><section class="print-page" id="options"><h1 id="options-options">Options<a class="headerlink"  href="#options-options" title="Permanent link">&para;</a></h1>
-<p>You can customize the plugin by setting options in <code>mkdocs.yml</code>. For example:</p>
+<p>You can customize the plugin by setting options in <code>mkdocs.yml</code>. This site uses the following settings:</p>
 <div class="highlight"><pre><span></span><code>plugins:
   - print-site:
       add_to_navigation: true
       print_page_title: &#39;Print Site&#39;
       add_table_of_contents: true
+      add_full_urls: false
+      enumerate_headings: true
 </code></pre></div>
 
 <h2 id="options-add_to_navigation"><code>add_to_navigation</code><a class="headerlink"  href="#options-add_to_navigation" title="Permanent link">&para;</a></h2>
 <p>Default is <code>true</code>. Adds a link 'Print Site' to your site navigation.</p>
 <h2 id="options-print_page_title"><code>print_page_title</code><a class="headerlink"  href="#options-print_page_title" title="Permanent link">&para;</a></h2>
-<p>Default is 'Print Site'. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</p>
+<p>Default is <code>'Print Site'</code>. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</p>
 <h2 id="options-add_table_of_contents"><code>add_table_of_contents</code><a class="headerlink"  href="#options-add_table_of_contents" title="Permanent link">&para;</a></h2>
-<p>Default is <code>true</code>. Adds a table of contents section at the beginning of the print page.</p></section><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
+<p>Default is <code>true</code>. Adds a table of contents section at the beginning of the print page.</p>
+<h2 id="options-add_full_urls"><code>add_full_urls</code><a class="headerlink"  href="#options-add_full_urls" title="Permanent link">&para;</a></h2>
+<p>Default is <code>false</code>. When printing a page, you cannot see the target of a link. This option adds the target url in parenthesis behind a link. For example "<a href="https://www.google.com">google.com</a>" will be replaced by "<a href="https://www.google.com">google.com</a> (https://www.google.com)"</p>
+<h2 id="options-enumerate_headings"><code>enumerate_headings</code><a class="headerlink"  href="#options-enumerate_headings" title="Permanent link">&para;</a></h2>
+<p>Default <code>false</code>. This will add numbering to all headings, which is useful for larger sites.</p></section><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
 <p>This content is here to demonstrate what it looks like while printing.</p>
 <p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a  href="#print_page.md">print page</a> and check it out!</p>
 <h2 id="demo_content-links-to-other-pages">Links to other pages<a class="headerlink"  href="#demo_content-links-to-other-pages" title="Permanent link">&para;</a></h2>
@@ -602,7 +610,7 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#
 <h2 id="contributing-documentation">Documentation<a class="headerlink"  href="#contributing-documentation" title="Permanent link">&para;</a></h2>
 <p>Is in <code>docs/</code>. To <a href="https://www.mkdocs.org/user-guide/deploying-your-docs/">deploy the docs</a>, run:</p>
 <div class="highlight"><pre><span></span><code>mkdocs gh-deploy
-</code></pre></div></section>
+</code></pre></div></section></div>
                 
               
               
@@ -639,7 +647,7 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#
     </div>
     
       <script src="assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"search.result.other": "# matching documents", "search.result.one": "1 matching document", "clipboard.copied": "Copied to clipboard", "search.config.separator": "[\\s\\-]+", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.lang": "en", "search.result.none": "No matching documents", "clipboard.copy": "Copy to clipboard", "search.result.placeholder": "Type to start searching"}</script>
       
       <script>
         app = initialize({
@@ -657,10 +665,16 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
+        <script src="js/print-site.js"></script>
+      
+        <script src="js/print-site-instant-loading.js"></script>
+      
     
   
-        <script type="text/javascript" src="js/print-site-toc.js"></script>
-        
-        <script type="text/javascript" src="js/print-site-material.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function () {
+            change_material_theme('default');generate_toc();
+        })
+        </script>
         </body>
 </html>
