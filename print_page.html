@@ -32,7 +32,7 @@
       
         
         
-        <meta name="theme-color" content="#4051b5">
+        <meta name="theme-color" content="#2094f3">
       
     
     
@@ -59,8 +59,10 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue" data-md-color-accent="blue">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -281,7 +283,19 @@
                   
                 
                 
-                <div id="print-site-page" class="print-site-enumerate-headings">
+                <div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section id="print-site-cover-page">
+            <h1>mkdocs-print-site-plugin Docs</h1>
+
+
+    <h2>MkDocs Plugin allowing your site visitors to *File > Print > Save as PDF* the entire site.</h2>
+
+
+TODO:
+- write documentation on this functionality
+- make a first nice cover page using stuff from MkDocs
+        </section>
+        
         <div id="print-site-banner">
             <p>
                 <em>This box will disappear when printing</em>
@@ -325,6 +339,7 @@
       add_table_of_contents: true
       add_full_urls: false
       enumerate_headings: true
+      enumerate_figures: true
 </code></pre></div>
 
 <h2 id="options-add_to_navigation"><code>add_to_navigation</code><a class="headerlink"  href="#options-add_to_navigation" title="Permanent link">&para;</a></h2>
@@ -336,7 +351,9 @@
 <h2 id="options-add_full_urls"><code>add_full_urls</code><a class="headerlink"  href="#options-add_full_urls" title="Permanent link">&para;</a></h2>
 <p>Default is <code>false</code>. When printing a page, you cannot see the target of a link. This option adds the target url in parenthesis behind a link. For example "<a href="https://www.google.com">google.com</a>" will be replaced by "<a href="https://www.google.com">google.com</a> (https://www.google.com)"</p>
 <h2 id="options-enumerate_headings"><code>enumerate_headings</code><a class="headerlink"  href="#options-enumerate_headings" title="Permanent link">&para;</a></h2>
-<p>Default <code>false</code>. This will add numbering to all headings, which is useful for larger sites.</p></section><section class="print-page" id="customization"><h1 id="customization-customization">Customization<a class="headerlink"  href="#customization-customization" title="Permanent link">&para;</a></h1>
+<p>Default <code>false</code>. This will add numbering (enumeration) to all headings as well as the table of contents. Example "1.2 A chapter subsection".</p>
+<h2 id="options-enumerate_figures"><code>enumerate_figures</code><a class="headerlink"  href="#options-enumerate_figures" title="Permanent link">&para;</a></h2>
+<p>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</p></section><section class="print-page" id="customization"><h1 id="customization-customization">Customization<a class="headerlink"  href="#customization-customization" title="Permanent link">&para;</a></h1>
 <p>You might want to customize your site to include a 'print' button on every page (like the one in the right corner of this page 👆)</p>
 <p>MkDocs supports <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir">theme extension</a>, an easy way to override parts of a theme.
 You can use <code>page.url_to_print_page</code> to get the link to the site print page.</p>
@@ -558,12 +575,34 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <li><span class="twemoji facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></span> – Facebook</li>
 </ul>
 <p><img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </p>
-<h3 id="demo_content-an-image">an image<a class="headerlink"  href="#demo_content-an-image" title="Permanent link">&para;</a></h3>
+<h3 id="demo_content-images">Images<a class="headerlink"  href="#demo_content-images" title="Permanent link">&para;</a></h3>
+<p><code>mkdocs-print-site-plugin</code> supports enumerating figure captions (which can be added easily using the <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">img2fig</a> plugin):</p>
 <figure>
   <img src="https://dummyimage.com/600x400/eee/aaa" width="300" />
   <figcaption>Image caption</figcaption>
 </figure>
 
+<figure>
+  <img src="https://play-lh.googleusercontent.com/JHDqEqU0QNC8vsa5_UsPAws5X1OvTVPcfDVLnV1WXhoYrEX81sE6fL7cmamStPrK_A=w1440-h620-rw" />
+  <figcaption>A cat playing 1</figcaption>
+</figure>
+
+<figure>
+  <img src="https://play-lh.googleusercontent.com/tKuOgQBwDTjhZg3DjCdZVTSVa9X9iMrtrM_1JDH6Ky_YyQeKw_bnFDy0tj1aZ39TDnI=w1440-h620-r" />
+  <figcaption>Another cat playing</figcaption>
+</figure>
+
+<figure>
+  <img src="https://play-lh.googleusercontent.com/4CPahw1_E0b61tZKq4QI1bw_dqR6bYy0aDiNWrn-MCoz9Wq5bNyhKywfVlK01nNKR-A=w1440-h620-r" />
+  <figcaption>More cats</figcaption>
+</figure>
+
+<figure>
+  <img src="https://play-lh.googleusercontent.com/5DeXBFITrh81XB68XxvJGvat5bwVj2ELVdSXNb6mGdvohZtnUoUl5kkPLPSrgtN9XHk=w1440-h620-r" />
+  <figcaption>Cats love the internet</figcaption>
+</figure>
+
+<h3 id="demo_content-lists">Lists<a class="headerlink"  href="#demo_content-lists" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis

@@ -32,7 +32,7 @@
       
         
         
-        <meta name="theme-color" content="#4051b5">
+        <meta name="theme-color" content="#2094f3">
       
     
     
@@ -59,8 +59,10 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue" data-md-color-accent="blue">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -285,8 +287,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#an-image" class="md-nav__link">
-    an image
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
   </a>
   
 </li>
@@ -387,8 +396,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#an-image" class="md-nav__link">
-    an image
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
   </a>
   
 </li>
@@ -615,12 +631,34 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <li><span class="twemoji facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></span> – Facebook</li>
 </ul>
 <p><img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </p>
-<h3 id="an-image">an image<a class="headerlink" href="#an-image" title="Permanent link">&para;</a></h3>
+<h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
+<p><code>mkdocs-print-site-plugin</code> supports enumerating figure captions (which can be added easily using the <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">img2fig</a> plugin):</p>
 <figure>
   <img src="https://dummyimage.com/600x400/eee/aaa" width="300" />
   <figcaption>Image caption</figcaption>
 </figure>
 
+<figure>
+  <img src="https://play-lh.googleusercontent.com/JHDqEqU0QNC8vsa5_UsPAws5X1OvTVPcfDVLnV1WXhoYrEX81sE6fL7cmamStPrK_A=w1440-h620-rw" />
+  <figcaption>A cat playing 1</figcaption>
+</figure>
+
+<figure>
+  <img src="https://play-lh.googleusercontent.com/tKuOgQBwDTjhZg3DjCdZVTSVa9X9iMrtrM_1JDH6Ky_YyQeKw_bnFDy0tj1aZ39TDnI=w1440-h620-r" />
+  <figcaption>Another cat playing</figcaption>
+</figure>
+
+<figure>
+  <img src="https://play-lh.googleusercontent.com/4CPahw1_E0b61tZKq4QI1bw_dqR6bYy0aDiNWrn-MCoz9Wq5bNyhKywfVlK01nNKR-A=w1440-h620-r" />
+  <figcaption>More cats</figcaption>
+</figure>
+
+<figure>
+  <img src="https://play-lh.googleusercontent.com/5DeXBFITrh81XB68XxvJGvat5bwVj2ELVdSXNb6mGdvohZtnUoUl5kkPLPSrgtN9XHk=w1440-h620-r" />
+  <figcaption>Cats love the internet</figcaption>
+</figure>
+
+<h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis

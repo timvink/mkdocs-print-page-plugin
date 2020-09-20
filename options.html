@@ -32,7 +32,7 @@
       
         
         
-        <meta name="theme-color" content="#4051b5">
+        <meta name="theme-color" content="#2094f3">
       
     
     
@@ -59,8 +59,10 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue" data-md-color-accent="blue">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -273,6 +275,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#enumerate_figures" class="md-nav__link">
+    enumerate_figures
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -386,6 +395,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#enumerate_figures" class="md-nav__link">
+    enumerate_figures
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -422,6 +438,7 @@
       add_table_of_contents: true
       add_full_urls: false
       enumerate_headings: true
+      enumerate_figures: true
 </code></pre></div>
 
 <h2 id="add_to_navigation"><code>add_to_navigation</code><a class="headerlink" href="#add_to_navigation" title="Permanent link">&para;</a></h2>
@@ -433,7 +450,9 @@
 <h2 id="add_full_urls"><code>add_full_urls</code><a class="headerlink" href="#add_full_urls" title="Permanent link">&para;</a></h2>
 <p>Default is <code>false</code>. When printing a page, you cannot see the target of a link. This option adds the target url in parenthesis behind a link. For example "<a href="https://www.google.com">google.com</a>" will be replaced by "<a href="https://www.google.com">google.com</a> (https://www.google.com)"</p>
 <h2 id="enumerate_headings"><code>enumerate_headings</code><a class="headerlink" href="#enumerate_headings" title="Permanent link">&para;</a></h2>
-<p>Default <code>false</code>. This will add numbering to all headings, which is useful for larger sites.</p>
+<p>Default <code>false</code>. This will add numbering (enumeration) to all headings as well as the table of contents. Example "1.2 A chapter subsection".</p>
+<h2 id="enumerate_figures"><code>enumerate_figures</code><a class="headerlink" href="#enumerate_figures" title="Permanent link">&para;</a></h2>
+<p>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</p>
                 
               
 
