@@ -45,9 +45,9 @@
     
     
     
-      <link rel="stylesheet" href="css/print-site.css">
-    
       <link rel="stylesheet" href="css/print-site-material.css">
+    
+      <link rel="stylesheet" href="css/print-site.css">
     
     
       
@@ -216,10 +216,48 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="customization.html" title="Customization" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       Customization
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Customization" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Customization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="print_button.html" title="Adding a print button" class="md-nav__link">
+      Adding a print button
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cover_page.html" title="Customize the cover page" class="md-nav__link">
+      Customize the cover page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -284,12 +322,43 @@
                 
                 
                 <div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section id="print-site-cover-page">
+            
+<div style="padding-bottom: 3em">
+
+    
+        <h1>mkdocs-print-site-plugin Docs</h1>
+    
+
+    
+        <h2>MkDocs Plugin allowing your site visitors to *File > Print > Save as PDF* the entire site.</h2>
+    
+
+</div>
+
+
+    <p>Authors: Tim Vink</p>
+
+
+<p>
+    
+        <small>Website: <a href="https://timvink.github.io/mkdocs-print-site-plugin/">https://timvink.github.io/mkdocs-print-site-plugin/</a></small><br />
+    
+    
+        <small>Repo: <a href="https://github.com/timvink/mkdocs-print-site-plugin/">https://github.com/timvink/mkdocs-print-site-plugin/</a></small><br />
+    
+    
+        <small>Copyright &copy; 2020 Maintained by <a href="https://github.com/timvink">Tim Vink</a>.</small><br />
+    
+</p>
+        </section>
+        
         <div id="print-site-banner">
             <p>
                 <em>This box will disappear when printing</em>
                 <span style="float: right"><a href="https://timvink.github.io/mkdocs-print-site-plugin/">mkdocs-print-site-plugin</a></span>
             </p>
-            <p>This page combines all pages in the site. This makes it easy to print or export to PDF (<b>File > Print > Save as PDF</b>)</p>
+            <p>This page combines all site pages and applies print and PDF friendly styling. Print or export to PDF using <b>File > Print > Save as PDF</b></p>
         </div>
         
         <section class="print-page">
@@ -310,9 +379,9 @@
 </code></pre></div>
 
 <p>Next, add the following lines to your <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code>plugins:
-  - search
-  - print-site
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">search</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">print-site</span>
 </code></pre></div>
 
 <blockquote>
@@ -320,14 +389,16 @@
 <p>If you have no <code>plugins</code> entry in your config file yet, you'll likely also want to add the <code>search</code> plugin. MkDocs enables it by default if there is no <code>plugins</code> entry set.</p>
 </blockquote></section><section class="print-page" id="options"><h1 id="options-options">Options<a class="headerlink"  href="#options-options" title="Permanent link">&para;</a></h1>
 <p>You can customize the plugin by setting options in <code>mkdocs.yml</code>. This site uses the following settings:</p>
-<div class="highlight"><pre><span></span><code>plugins:
-  - print-site:
-      add_to_navigation: true
-      print_page_title: &#39;Print Site&#39;
-      add_table_of_contents: true
-      add_full_urls: false
-      enumerate_headings: true
-      enumerate_figures: true
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">print-site</span><span class="p">:</span>
+      <span class="nt">add_to_navigation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">print_page_title</span><span class="p">:</span> <span class="s">&#39;Print</span><span class="nv"> </span><span class="s">Site&#39;</span>
+      <span class="nt">add_table_of_contents</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">add_full_urls</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+      <span class="nt">enumerate_headings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">enumerate_figures</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
 </code></pre></div>
 
 <h2 id="options-add_to_navigation"><code>add_to_navigation</code><a class="headerlink"  href="#options-add_to_navigation" title="Permanent link">&para;</a></h2>
@@ -341,52 +412,86 @@
 <h2 id="options-enumerate_headings"><code>enumerate_headings</code><a class="headerlink"  href="#options-enumerate_headings" title="Permanent link">&para;</a></h2>
 <p>Default <code>false</code>. This will add numbering (enumeration) to all headings as well as the table of contents. Example "1.2 A chapter subsection".</p>
 <h2 id="options-enumerate_figures"><code>enumerate_figures</code><a class="headerlink"  href="#options-enumerate_figures" title="Permanent link">&para;</a></h2>
-<p>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</p></section><section class="print-page" id="customization"><h1 id="customization-customization">Customization<a class="headerlink"  href="#customization-customization" title="Permanent link">&para;</a></h1>
+<p>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</p>
+<h2 id="options-add_cover_page"><code>add_cover_page</code><a class="headerlink"  href="#options-add_cover_page" title="Permanent link">&para;</a></h2>
+<p>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a  href="#cover_page">Customizing the cover page</a></p>
+<h2 id="options-cover_page_template"><code>cover_page_template</code><a class="headerlink"  href="#options-cover_page_template" title="Permanent link">&para;</a></h2>
+<p>Default <code>""</code>. The path to a custom cover page template to use. See <a  href="#cover_page">Customizing the cover page</a> for more info.</p></section><section class="print-page" id="print_button"><h1 id="print_button-adding-a-print-button">Adding a print button<a class="headerlink"  href="#print_button-adding-a-print-button" title="Permanent link">&para;</a></h1>
 <p>You might want to customize your site to include a 'print' button on every page (like the one in the right corner of this page 👆)</p>
 <p>MkDocs supports <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir">theme extension</a>, an easy way to override parts of a theme.
 You can use <code>page.url_to_print_page</code> to get the link to the site print page.</p>
-<h2 id="customization-adding-a-print-button-to-mkdocs-material-theme">Adding a print button to mkdocs-material theme<a class="headerlink"  href="#customization-adding-a-print-button-to-mkdocs-material-theme" title="Permanent link">&para;</a></h2>
+<h2 id="print_button-adding-a-print-button-to-mkdocs-material-theme">Adding a print button to mkdocs-material theme<a class="headerlink"  href="#print_button-adding-a-print-button-to-mkdocs-material-theme" title="Permanent link">&para;</a></h2>
 <p>In <code>mkdocs-material</code> theme (see <a href="https://squidfunk.github.io/mkdocs-material/customization/#overriding-template-blocks">customization</a>), first create a directory for overrides and update your <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code>theme:
-  name: material
-  custom_dir: docs/overrides
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">material</span>
+  <span class="nt">custom_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docs/overrides</span>
 </code></pre></div>
 
 <p>You can create the file <code>docs/overrides/main.html</code> as follows:</p>
-<div class="highlight"><pre><span></span><code>{% extends &quot;base.html&quot; %}
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
 
-{% block content %}
-{% if page.url_to_print_page %}
-    &lt;a href=&quot;{{ page.url_to_print_page }}&quot; title=&quot;Print Site&quot; class=&quot;md-content__button md-icon&quot;&gt;
-        {% include &quot;.icons/material/printer.svg&quot; %}
-    &lt;/a&gt;
-{% endif %}
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">page.url_to_print_page</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">page.url_to_print_page</span> <span class="cp">}}</span><span class="x">&quot; title=&quot;Print Site&quot; class=&quot;md-content__button md-icon&quot;&gt;</span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;.icons/material/printer.svg&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;/a&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 
-{{ super() }}
-{% endblock content %}
+<span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
 
-<h2 id="customization-adding-a-print-button-to-mkdocs-theme">Adding a print button to mkdocs theme<a class="headerlink"  href="#customization-adding-a-print-button-to-mkdocs-theme" title="Permanent link">&para;</a></h2>
+<h2 id="print_button-adding-a-print-button-to-mkdocs-theme">Adding a print button to mkdocs theme<a class="headerlink"  href="#print_button-adding-a-print-button-to-mkdocs-theme" title="Permanent link">&para;</a></h2>
 <p>You can also <a href="https://www.mkdocs.org/user-guide/custom-themes/#creating-a-custom-theme">customize</a> the base mkdocs theme, by first creating an <code>overrides</code> directory:</p>
-<div class="highlight"><pre><span></span><code>theme:
-    name: mkdocs
-    custom_dir: docs/overrides
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
+    <span class="nt">custom_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docs/overrides</span>
 </code></pre></div>
 
 <p>And then adding a file <code>docs/overrides/main.html</code> with the following content:</p>
-<div class="highlight"><pre><span></span><code>{% extends &quot;base.html&quot; %}
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
 
-{% block repo %}
-    {% if page.url_to_print_page %}
-        <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-item&quot;</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ page.url_to_print_page }}&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Print Site&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-link&quot;</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fa fa-print&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> Print
-            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    {% endif %}
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">repo</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">page.url_to_print_page</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        &lt;li class=&quot;nav-item&quot;&gt;</span>
+<span class="x">            &lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">page.url_to_print_page</span> <span class="cp">}}</span><span class="x">&quot; title=&quot;Print Site&quot; class=&quot;nav-link&quot;&gt;</span>
+<span class="x">                &lt;i class=&quot;fa fa-print&quot;&gt;&lt;/i&gt; Print</span>
+<span class="x">            &lt;/a&gt;</span>
+<span class="x">        &lt;/li&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 
-{{ super() }}
-{% endblock repo %}
+<span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">repo</span> <span class="cp">%}</span><span class="x"></span>
+</code></pre></div></section><section class="print-page" id="cover_page"><h1 id="cover_page-customize-the-cover-page">Customize the cover page<a class="headerlink"  href="#cover_page-customize-the-cover-page" title="Permanent link">&para;</a></h1>
+<p>When the <code>add_cover_page</code> option is set to true, <code>mkdocs-print-site-plugin</code> will generate a cover page when printing. This cover page is quite basic, and you might want to customize it.</p>
+<p>You can do that by specifying a custom cover page template in the <code>mkdocs.yml</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># mkdocs.yml</span>
+<span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;path/to/custom_cover_page.tpl&quot;</span>
+</code></pre></div>
+
+<p>This is a standard <a href="https://jinja.palletsprojects.com/en/2.11.x/templates/">jinja2 template</a> file where you can combine HTML and use the information specified in <code>mkdocs.yml</code> as jinja2 variables.
+As an example, have a look at the default <a href="https://github.com/timvink/mkdocs-print-site-plugin/tree/master/mkdocs_print_site_plugin/templates/cover_page.tpl">cover_page.tpl</a>.</p>
+<h2 id="cover_page-adding-extra-content">Adding extra content<a class="headerlink"  href="#cover_page-adding-extra-content" title="Permanent link">&para;</a></h2>
+<p>You might want to add some content to your cover page that's not yet specified in your <code>mkdocs.yml</code> file. Of course you could just hard-code it in your custom template file, but you could also make use of MkDocs's <a href="https://www.mkdocs.org/user-guide/custom-themes/#extra-context">extra context</a> feature:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># mkdocs.yml</span>
+<span class="nt">extra</span><span class="p">:</span>
+    <span class="nt">abstract</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a report about a topic</span>
+</code></pre></div>
+
+<p>You can then use <code>{{ config.extra.abstract }}</code> in your custom template file to insert your abstract.</p>
+<h2 id="cover_page-change-the-styling">Change the styling<a class="headerlink"  href="#cover_page-change-the-styling" title="Permanent link">&para;</a></h2>
+<p>You'll likely also need to change the styling to your liking. You can add your own CSS file using the <a href="https://www.mkdocs.org/user-guide/configuration/#extra_css">extra_css</a> option from MkDocs:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># mkdocs.yml</span>
+<span class="nt">extra_css</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">path/to/my_cover_page.css</span>
+</code></pre></div>
+
+<p><code>mkdocs-print-site-plugin</code> wraps the cover page in a <code>&lt;section&gt;</code> with id <code>print-site-cover-page</code>. You should use this in you CSS to ensure not affecting other pages. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="c">/* my_cover_page.css */</span>
+<span class="p">#</span><span class="nn">print-site-cover-page</span> <span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></section><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
 <p>This content is here to demonstrate what it looks like while printing.</p>
 <p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a  href="#print_page.md">print page</a> and check it out!</p>
@@ -571,25 +676,14 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 </figure>
 
 <figure>
-  <img src="https://play-lh.googleusercontent.com/JHDqEqU0QNC8vsa5_UsPAws5X1OvTVPcfDVLnV1WXhoYrEX81sE6fL7cmamStPrK_A=w1440-h620-rw" />
-  <figcaption>A cat playing 1</figcaption>
+  <img src="https://dummyimage.com/600x400/eee/aaa" width="300" />
+  <figcaption>Another image caption</figcaption>
 </figure>
 
-<figure>
-  <img src="https://play-lh.googleusercontent.com/tKuOgQBwDTjhZg3DjCdZVTSVa9X9iMrtrM_1JDH6Ky_YyQeKw_bnFDy0tj1aZ39TDnI=w1440-h620-r" />
-  <figcaption>Another cat playing</figcaption>
-</figure>
-
-<figure>
-  <img src="https://play-lh.googleusercontent.com/4CPahw1_E0b61tZKq4QI1bw_dqR6bYy0aDiNWrn-MCoz9Wq5bNyhKywfVlK01nNKR-A=w1440-h620-r" />
-  <figcaption>More cats</figcaption>
-</figure>
-
-<figure>
-  <img src="https://play-lh.googleusercontent.com/5DeXBFITrh81XB68XxvJGvat5bwVj2ELVdSXNb6mGdvohZtnUoUl5kkPLPSrgtN9XHk=w1440-h620-r" />
-  <figcaption>Cats love the internet</figcaption>
-</figure>
-
+<p><img alt="" src="https://play-lh.googleusercontent.com/JHDqEqU0QNC8vsa5_UsPAws5X1OvTVPcfDVLnV1WXhoYrEX81sE6fL7cmamStPrK_A=w1440-h620-rw" title="A cat playing" /></p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/tKuOgQBwDTjhZg3DjCdZVTSVa9X9iMrtrM_1JDH6Ky_YyQeKw_bnFDy0tj1aZ39TDnI=w1440-h620-r" title="Another cat playing" /></p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/4CPahw1_E0b61tZKq4QI1bw_dqR6bYy0aDiNWrn-MCoz9Wq5bNyhKywfVlK01nNKR-A=w1440-h620-r" title="More cats that play" /></p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/5DeXBFITrh81XB68XxvJGvat5bwVj2ELVdSXNb6mGdvohZtnUoUl5kkPLPSrgtN9XHk=w1440-h620-r" title="The internet loves cats" /></p>
 <h3 id="demo_content-lists">Lists<a class="headerlink"  href="#demo_content-lists" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -748,15 +842,15 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#
         })
       </script>
       
+        <script src="js/print-site-instant-loading.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
         <script src="javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="js/print-site.js"></script>
-      
-        <script src="js/print-site-instant-loading.js"></script>
       
     
   

@@ -45,9 +45,9 @@
     
     
     
-      <link rel="stylesheet" href="css/print-site.css">
-    
       <link rel="stylesheet" href="css/print-site-material.css">
+    
+      <link rel="stylesheet" href="css/print-site.css">
     
     
       
@@ -221,10 +221,48 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="customization.html" title="Customization" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       Customization
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Customization" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Customization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="print_button.html" title="Adding a print button" class="md-nav__link">
+      Adding a print button
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cover_page.html" title="Customize the cover page" class="md-nav__link">
+      Customize the cover page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -639,25 +677,14 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 </figure>
 
 <figure>
-  <img src="https://play-lh.googleusercontent.com/JHDqEqU0QNC8vsa5_UsPAws5X1OvTVPcfDVLnV1WXhoYrEX81sE6fL7cmamStPrK_A=w1440-h620-rw" />
-  <figcaption>A cat playing 1</figcaption>
+  <img src="https://dummyimage.com/600x400/eee/aaa" width="300" />
+  <figcaption>Another image caption</figcaption>
 </figure>
 
-<figure>
-  <img src="https://play-lh.googleusercontent.com/tKuOgQBwDTjhZg3DjCdZVTSVa9X9iMrtrM_1JDH6Ky_YyQeKw_bnFDy0tj1aZ39TDnI=w1440-h620-r" />
-  <figcaption>Another cat playing</figcaption>
-</figure>
-
-<figure>
-  <img src="https://play-lh.googleusercontent.com/4CPahw1_E0b61tZKq4QI1bw_dqR6bYy0aDiNWrn-MCoz9Wq5bNyhKywfVlK01nNKR-A=w1440-h620-r" />
-  <figcaption>More cats</figcaption>
-</figure>
-
-<figure>
-  <img src="https://play-lh.googleusercontent.com/5DeXBFITrh81XB68XxvJGvat5bwVj2ELVdSXNb6mGdvohZtnUoUl5kkPLPSrgtN9XHk=w1440-h620-r" />
-  <figcaption>Cats love the internet</figcaption>
-</figure>
-
+<p><img alt="" src="https://play-lh.googleusercontent.com/JHDqEqU0QNC8vsa5_UsPAws5X1OvTVPcfDVLnV1WXhoYrEX81sE6fL7cmamStPrK_A=w1440-h620-rw" title="A cat playing" /></p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/tKuOgQBwDTjhZg3DjCdZVTSVa9X9iMrtrM_1JDH6Ky_YyQeKw_bnFDy0tj1aZ39TDnI=w1440-h620-r" title="Another cat playing" /></p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/4CPahw1_E0b61tZKq4QI1bw_dqR6bYy0aDiNWrn-MCoz9Wq5bNyhKywfVlK01nNKR-A=w1440-h620-r" title="More cats that play" /></p>
+<p><img alt="" src="https://play-lh.googleusercontent.com/5DeXBFITrh81XB68XxvJGvat5bwVj2ELVdSXNb6mGdvohZtnUoUl5kkPLPSrgtN9XHk=w1440-h620-r" title="The internet loves cats" /></p>
 <h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -751,7 +778,7 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref" href="#f
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="customization.html" title="Customization" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="cover_page.html" title="Customize the cover page" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -760,7 +787,7 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref" href="#f
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Customization
+                Customize the cover page
               </div>
             </div>
           </a>
@@ -816,15 +843,15 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref" href="#f
         })
       </script>
       
+        <script src="js/print-site-instant-loading.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
         <script src="javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="js/print-site.js"></script>
-      
-        <script src="js/print-site-instant-loading.js"></script>
       
     
   </body>

@@ -45,9 +45,9 @@
     
     
     
-      <link rel="stylesheet" href="css/print-site.css">
-    
       <link rel="stylesheet" href="css/print-site-material.css">
+    
+      <link rel="stylesheet" href="css/print-site.css">
     
     
       
@@ -259,10 +259,48 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="customization.html" title="Customization" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       Customization
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Customization" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Customization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="print_button.html" title="Adding a print button" class="md-nav__link">
+      Adding a print button
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cover_page.html" title="Customize the cover page" class="md-nav__link">
+      Customize the cover page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -374,9 +412,9 @@
 </code></pre></div>
 
 <p>Next, add the following lines to your <code>mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code>plugins:
-  - search
-  - print-site
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">search</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">print-site</span>
 </code></pre></div>
 
 <blockquote>
@@ -453,15 +491,15 @@
         })
       </script>
       
+        <script src="js/print-site-instant-loading.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
         <script src="javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="js/print-site.js"></script>
-      
-        <script src="js/print-site-instant-loading.js"></script>
       
     
   </body>

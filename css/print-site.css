@@ -203,9 +203,8 @@ Print site table of contents styling
         text-align: center;
     }
     #print-site-cover-page h1 {
-        font-size: 400%;
+        font-size: 300%;
     }
-
 
 }
 

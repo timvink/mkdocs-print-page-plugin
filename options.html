@@ -45,9 +45,9 @@
     
     
     
-      <link rel="stylesheet" href="css/print-site.css">
-    
       <link rel="stylesheet" href="css/print-site-material.css">
+    
+      <link rel="stylesheet" href="css/print-site.css">
     
     
       
@@ -282,6 +282,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#add_cover_page" class="md-nav__link">
+    add_cover_page
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cover_page_template" class="md-nav__link">
+    cover_page_template
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -294,10 +308,48 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="customization.html" title="Customization" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       Customization
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Customization" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Customization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="print_button.html" title="Adding a print button" class="md-nav__link">
+      Adding a print button
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cover_page.html" title="Customize the cover page" class="md-nav__link">
+      Customize the cover page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -402,6 +454,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#add_cover_page" class="md-nav__link">
+    add_cover_page
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cover_page_template" class="md-nav__link">
+    cover_page_template
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -431,14 +497,16 @@
                 
                 <h1 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h1>
 <p>You can customize the plugin by setting options in <code>mkdocs.yml</code>. This site uses the following settings:</p>
-<div class="highlight"><pre><span></span><code>plugins:
-  - print-site:
-      add_to_navigation: true
-      print_page_title: &#39;Print Site&#39;
-      add_table_of_contents: true
-      add_full_urls: false
-      enumerate_headings: true
-      enumerate_figures: true
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">print-site</span><span class="p">:</span>
+      <span class="nt">add_to_navigation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">print_page_title</span><span class="p">:</span> <span class="s">&#39;Print</span><span class="nv"> </span><span class="s">Site&#39;</span>
+      <span class="nt">add_table_of_contents</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">add_full_urls</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+      <span class="nt">enumerate_headings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">enumerate_figures</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
 </code></pre></div>
 
 <h2 id="add_to_navigation"><code>add_to_navigation</code><a class="headerlink" href="#add_to_navigation" title="Permanent link">&para;</a></h2>
@@ -453,6 +521,10 @@
 <p>Default <code>false</code>. This will add numbering (enumeration) to all headings as well as the table of contents. Example "1.2 A chapter subsection".</p>
 <h2 id="enumerate_figures"><code>enumerate_figures</code><a class="headerlink" href="#enumerate_figures" title="Permanent link">&para;</a></h2>
 <p>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</p>
+<h2 id="add_cover_page"><code>add_cover_page</code><a class="headerlink" href="#add_cover_page" title="Permanent link">&para;</a></h2>
+<p>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a href="cover_page.html">Customizing the cover page</a></p>
+<h2 id="cover_page_template"><code>cover_page_template</code><a class="headerlink" href="#cover_page_template" title="Permanent link">&para;</a></h2>
+<p>Default <code>""</code>. The path to a custom cover page template to use. See <a href="cover_page.html">Customizing the cover page</a> for more info.</p>
                 
               
 
@@ -487,13 +559,13 @@
           </a>
         
         
-          <a href="customization.html" title="Customization" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="print_button.html" title="Adding a print button" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Customization
+                Adding a print button
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -537,15 +609,15 @@
         })
       </script>
       
+        <script src="js/print-site-instant-loading.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
         <script src="javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="js/print-site.js"></script>
-      
-        <script src="js/print-site-instant-loading.js"></script>
       
     
   </body>
