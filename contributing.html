@@ -449,22 +449,22 @@
 </ul>
 <h2 id="unit-tests">Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h2>
 <p>Make sure to install an editable version before running tests:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">tests</span><span class="o">/</span><span class="n">test_requirements</span><span class="o">.</span><span class="n">txt</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
-<span class="n">pytest</span> <span class="o">--</span><span class="n">cov</span><span class="o">=</span><span class="n">mkdocs_print_site_plugin</span> <span class="o">--</span><span class="n">cov</span><span class="o">-</span><span class="n">report</span> <span class="n">term</span><span class="o">-</span><span class="n">missing</span> <span class="n">tests</span><span class="o">/</span>
+<div class="highlight"><pre><span></span><code>pip install -r tests/test_requirements.txt
+pip install -e .
+pytest --cov<span class="o">=</span>mkdocs_print_site_plugin --cov-report term-missing tests/
 </code></pre></div>
 
 <p>If it makes sense, writing tests for your PRs is always appreciated and will help get them merged.</p>
 <p>In addition, this project uses <a href="https://pypi.org/project/pyflakes/">pyflakes</a> for static code checking:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">pyflakes</span>
-<span class="n">pyflakes</span> <span class="n">tests</span><span class="o">/</span> <span class="n">mkdocs_print_site_plugin</span><span class="o">/</span>
+<div class="highlight"><pre><span></span><code>pip install pyflakes
+pyflakes tests/ mkdocs_print_site_plugin/
 </code></pre></div>
 
 <h2 id="manual-testing">Manual testing<a class="headerlink" href="#manual-testing" title="Permanent link">&para;</a></h2>
 <p>To quickly serve a website with your latest changes to the plugin use the sites in our tests suite. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">tests</span><span class="o">/</span><span class="n">test_requirements</span><span class="o">.</span><span class="n">txt</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
-<span class="n">mkdocs</span> <span class="n">serve</span> <span class="o">-</span><span class="n">f</span> <span class="n">tests</span><span class="o">/</span><span class="n">fixutures</span><span class="o">/</span><span class="n">basic</span><span class="o">/</span><span class="n">mkdocs</span><span class="o">.</span><span class="n">yml</span>
+<div class="highlight"><pre><span></span><code>pip install -r tests/test_requirements.txt
+pip install -e .
+mkdocs serve -f tests/fixutures/basic/mkdocs.yml
 </code></pre></div>
 
 <p>Tip: If you use google chrome, you can also view the print version of a page inside the browser <a href="https://www.smashingmagazine.com/2018/05/print-stylesheets-in-2018/">by setting the renderer</a>.</p>
