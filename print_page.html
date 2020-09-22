@@ -401,22 +401,30 @@
       <span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
 </code></pre></div>
 
-<h2 id="options-add_to_navigation"><code>add_to_navigation</code><a class="headerlink"  href="#options-add_to_navigation" title="Permanent link">&para;</a></h2>
-<p>Default is <code>true</code>. Adds a link 'Print Site' to your site navigation.</p>
-<h2 id="options-print_page_title"><code>print_page_title</code><a class="headerlink"  href="#options-print_page_title" title="Permanent link">&para;</a></h2>
-<p>Default is <code>'Print Site'</code>. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</p>
-<h2 id="options-add_table_of_contents"><code>add_table_of_contents</code><a class="headerlink"  href="#options-add_table_of_contents" title="Permanent link">&para;</a></h2>
-<p>Default is <code>true</code>. Adds a table of contents section at the beginning of the print page.</p>
-<h2 id="options-add_full_urls"><code>add_full_urls</code><a class="headerlink"  href="#options-add_full_urls" title="Permanent link">&para;</a></h2>
-<p>Default is <code>false</code>. When printing a page, you cannot see the target of a link. This option adds the target url in parenthesis behind a link. For example "<a href="https://www.google.com">google.com</a>" will be replaced by "<a href="https://www.google.com">google.com</a> (https://www.google.com)"</p>
-<h2 id="options-enumerate_headings"><code>enumerate_headings</code><a class="headerlink"  href="#options-enumerate_headings" title="Permanent link">&para;</a></h2>
-<p>Default <code>false</code>. This will add numbering (enumeration) to all headings as well as the table of contents. Example "1.2 A chapter subsection".</p>
-<h2 id="options-enumerate_figures"><code>enumerate_figures</code><a class="headerlink"  href="#options-enumerate_figures" title="Permanent link">&para;</a></h2>
-<p>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</p>
-<h2 id="options-add_cover_page"><code>add_cover_page</code><a class="headerlink"  href="#options-add_cover_page" title="Permanent link">&para;</a></h2>
-<p>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a  href="#cover_page">Customizing the cover page</a></p>
-<h2 id="options-cover_page_template"><code>cover_page_template</code><a class="headerlink"  href="#options-cover_page_template" title="Permanent link">&para;</a></h2>
-<p>Default <code>""</code>. The path to a custom cover page template to use. See <a  href="#cover_page">Customizing the cover page</a> for more info.</p></section><section class="print-page" id="print_button"><h1 id="print_button-adding-a-print-button">Adding a print button<a class="headerlink"  href="#print_button-adding-a-print-button" title="Permanent link">&para;</a></h1>
+<dl>
+<dt><code>add_to_navigation</code></dt>
+<dd>Default is <code>true</code>. Adds a link 'Print Site' to your site navigation.</dd>
+<dt><code>print_page_title</code></dt>
+<dd>Default is <code>'Print Site'</code>. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</dd>
+<dt><code>add_table_of_contents</code></dt>
+<dd>Default is <code>true</code>. Adds a table of contents section at the beginning of the print page.</dd>
+<dt><code>add_full_urls</code></dt>
+<dd>
+<p>Default is <code>false</code>. When printing a page, you cannot see the target of a link. This option adds the target url in parenthesis behind a link.</p>
+<p>For example "<a href="https://www.google.com">google.com</a>" will be replaced by "<a href="https://www.google.com">google.com</a> (https://www.google.com)"</p>
+</dd>
+<dt><code>enumerate_headings</code></dt>
+<dd>
+<p>Default <code>false</code>. This will add numbering (enumeration) to all headings as well as the table of contents. </p>
+<p>Example "1.2 A chapter subsection".</p>
+</dd>
+<dt><code>enumerate_figures</code></dt>
+<dd>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</dd>
+<dt><code>add_cover_page</code></dt>
+<dd>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a  href="#cover_page">Customizing the cover page</a></dd>
+<dt><code>cover_page_template</code></dt>
+<dd>Default <code>""</code>. The path to a custom cover page template to use. See <a  href="#cover_page">Customizing the cover page</a> for more info.</dd>
+</dl></section><section class="print-page" id="print_button"><h1 id="print_button-adding-a-print-button">Adding a print button<a class="headerlink"  href="#print_button-adding-a-print-button" title="Permanent link">&para;</a></h1>
 <p>You might want to customize your site to include a 'print' button on every page (like the one in the right corner of this page 👆)</p>
 <p>MkDocs supports <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir">theme extension</a>, an easy way to override parts of a theme.
 You can use <code>page.url_to_print_page</code> to get the link to the site print page.</p>
