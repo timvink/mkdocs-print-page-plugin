@@ -430,7 +430,7 @@
                 <h1 id="adding-a-pdf-button">Adding a PDF button<a class="headerlink" href="#adding-a-pdf-button" title="Permanent link">&para;</a></h1>
 <p>You might want to make downloading a PDF even easier for your users. You could include a 'PDF' button on every page (like the one in the right corner of this page 👆)</p>
 <p>MkDocs supports <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir">theme extension</a>, an easy way to override parts of a theme.
-You can use <code>page.url_to_print_page</code> to get the link to the site print page.</p>
+You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>While it might be easier for your users, using this option means you need to manually create the PDF everytime you make a change to your website.</p>
@@ -453,6 +453,8 @@ You can use <code>page.url_to_print_page</code> to get the link to the site prin
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">docs/overrides/main.html</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
 
 <span class="cp">{%</span> <span class="k">if</span> <span class="nv">page.url_to_pdf</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">    &lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">page.url_to_pdf</span> <span class="cp">}}</span><span class="x">&quot; title=&quot;Site PDF&quot; class=&quot;md-content__button md-icon&quot;&gt;</span>

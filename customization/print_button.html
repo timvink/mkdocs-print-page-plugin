@@ -449,6 +449,7 @@ You can use <code>page.url_to_print_page</code> to get the link to the site prin
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
 
 <span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
+
 <span class="cp">{%</span> <span class="k">if</span> <span class="nv">page.url_to_print_page</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">    &lt;a href=&quot;</span><span class="cp">{{</span> <span class="nv">page.url_to_print_page</span> <span class="cp">}}</span><span class="x">&quot; title=&quot;Print Site&quot; class=&quot;md-content__button md-icon&quot;&gt;</span>
 <span class="x">        </span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;.icons/material/printer.svg&quot;</span> <span class="cp">%}</span><span class="x"></span>
