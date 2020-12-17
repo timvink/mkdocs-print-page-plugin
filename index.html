@@ -9,13 +9,14 @@
         <meta name="description" content="MkDocs Plugin allowing your site visitors to *File > Print > Save as PDF* the entire site.">
       
       
+      
         <link rel="canonical" href="https://timvink.github.io/mkdocs-print-site-plugin/index.html">
       
       
         <meta name="author" content="Tim Vink">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
@@ -23,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.358818c7.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.f0267088.min.css">
         
           
           
@@ -81,7 +82,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://timvink.github.io/mkdocs-print-site-plugin/" title="mkdocs-print-site-plugin Docs" class="md-header-nav__button md-logo" aria-label="mkdocs-print-site-plugin Docs">
       
@@ -166,7 +169,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://timvink.github.io/mkdocs-print-site-plugin/" title="mkdocs-print-site-plugin Docs" class="md-nav__button md-logo" aria-label="mkdocs-print-site-plugin Docs">
       
@@ -424,13 +429,11 @@
 <p>Install the plugin using <code>pip3</code>:</p>
 <div class="highlight"><pre><span></span><code>pip3 install mkdocs-print-site-plugin
 </code></pre></div>
-
 <p>Next, add the following lines to your <code>mkdocs.yml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">search</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">print-site</span>
 </code></pre></div>
-
 <blockquote>
 <p><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Make sure to put <code>print-site</code> to the <strong>bottom</strong> of the plugin list. This is because other plugins might alter your site (like the navigation), and you want these changes included in the print page.</p>
 <p>If you have no <code>plugins</code> entry in your config file yet, you'll likely also want to add the <code>search</code> plugin. MkDocs enables it by default if there is no <code>plugins</code> entry set.</p>
@@ -492,8 +495,8 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

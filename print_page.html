@@ -9,13 +9,14 @@
         <meta name="description" content="MkDocs Plugin allowing your site visitors to *File > Print > Save as PDF* the entire site.">
       
       
+      
         <link rel="canonical" href="https://timvink.github.io/mkdocs-print-site-plugin/print_page.html">
       
       
         <meta name="author" content="Tim Vink">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
@@ -23,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.358818c7.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.f0267088.min.css">
         
           
           
@@ -76,7 +77,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://timvink.github.io/mkdocs-print-site-plugin/" title="mkdocs-print-site-plugin Docs" class="md-header-nav__button md-logo" aria-label="mkdocs-print-site-plugin Docs">
       
@@ -161,7 +164,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://timvink.github.io/mkdocs-print-site-plugin/" title="mkdocs-print-site-plugin Docs" class="md-nav__button md-logo" aria-label="mkdocs-print-site-plugin Docs">
       
@@ -368,7 +373,8 @@
                 <em>This box will disappear when printing</em>
                 <span style="float: right"><a href="https://timvink.github.io/mkdocs-print-site-plugin/">mkdocs-print-site-plugin</a></span>
             </p>
-            <p>This page combines all site pages and applies print and PDF friendly styling. Print or export to PDF using <b>File > Print > Save as PDF</b></p>
+            <p>This page combines all site pages and applies print and PDF friendly styling. Print or export to PDF using <b>File > Print > Save as PDF</b>.</p>
+            <p>For creating PDFs, make sure to use the browser's print and save-as-pdf function instead of the system dialog.</p>
         </div>
         
         <section class="print-page">
@@ -381,23 +387,21 @@
 <a href="https://codecov.io/gh/timvink/mkdocs-print-site-plugin"><img alt="codecov" src="https://codecov.io/gh/timvink/mkdocs-print-site-plugin/branch/master/graph/badge.svg" /></a>
 <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/timvink/mkdocs-print-site-plugin" />
 <img alt="PyPI - License" src="https://img.shields.io/pypi/l/mkdocs-print-site-plugin" /></p>
-<h1 id="index-mkdocs-print-site-plugin">mkdocs-print-site-plugin<a class="headerlink"  href="#index-mkdocs-print-site-plugin" title="Permanent link">&para;</a></h1>
+<h1 id="index-mkdocs-print-site-plugin">mkdocs-print-site-plugin<a class="headerlink" href="#index-mkdocs-print-site-plugin" title="Permanent link">&para;</a></h1>
 <p><a href="https://www.mkdocs.org/">MkDocs</a> plugin that adds a page to your site combining all pages, allowing your site visitors to <em>File &gt; Print &gt; Save as PDF</em> the entire site.</p>
-<h2 id="index-installation">Installation<a class="headerlink"  href="#index-installation" title="Permanent link">&para;</a></h2>
+<h2 id="index-installation">Installation<a class="headerlink" href="#index-installation" title="Permanent link">&para;</a></h2>
 <p>Install the plugin using <code>pip3</code>:</p>
 <div class="highlight"><pre><span></span><code>pip3 install mkdocs-print-site-plugin
 </code></pre></div>
-
 <p>Next, add the following lines to your <code>mkdocs.yml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">search</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">print-site</span>
 </code></pre></div>
-
 <blockquote>
 <p><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Make sure to put <code>print-site</code> to the <strong>bottom</strong> of the plugin list. This is because other plugins might alter your site (like the navigation), and you want these changes included in the print page.</p>
 <p>If you have no <code>plugins</code> entry in your config file yet, you'll likely also want to add the <code>search</code> plugin. MkDocs enables it by default if there is no <code>plugins</code> entry set.</p>
-</blockquote></section><section class="print-page" id="options"><h1 id="options-options">Options<a class="headerlink"  href="#options-options" title="Permanent link">&para;</a></h1>
+</blockquote></section><section class="print-page" id="options"><h1 id="options-options">Options<a class="headerlink" href="#options-options" title="Permanent link">&para;</a></h1>
 <p>You can customize the plugin by setting options in <code>mkdocs.yml</code>. This site uses the following settings:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">print-site</span><span class="p">:</span>
@@ -410,10 +414,9 @@
       <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
 </code></pre></div>
-
 <dl>
 <dt><code>add_to_navigation</code></dt>
-<dd>Default is <code>true</code>. Adds a link 'Print Site' to your site navigation.</dd>
+<dd>Default is <code>true</code>. Adds a link 'Print Site' to your site navigation. You can also set to <code>false</code> and explicitly include the link in your navigation (<code>/print_page</code> or <code>/print_page.html</code>).</dd>
 <dt><code>print_page_title</code></dt>
 <dd>Default is <code>'Print Site'</code>. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</dd>
 <dt><code>add_table_of_contents</code></dt>
@@ -431,14 +434,14 @@
 <dt><code>enumerate_figures</code></dt>
 <dd>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</dd>
 <dt><code>add_cover_page</code></dt>
-<dd>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a  href="#customization-cover_page">Customizing the cover page</a></dd>
+<dd>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a href="#customization-cover_page">Customizing the cover page</a></dd>
 <dt><code>cover_page_template</code></dt>
-<dd>Default <code>""</code>. The path to a custom cover page template to use. See <a  href="#customization-cover_page">Customizing the cover page</a> for more info.</dd>
-</dl></section><h1 class='nav-section-title'>Customization</h1><section class="print-page" id="customization-print_button"><h1 id="customization-print_button-adding-a-print-button">Adding a print button<a class="headerlink"  href="#customization-print_button-adding-a-print-button" title="Permanent link">&para;</a></h1>
+<dd>Default <code>""</code>. The path to a custom cover page template to use. See <a href="#customization-cover_page">Customizing the cover page</a> for more info.</dd>
+</dl></section><h1 class='nav-section-title'>Customization</h1><section class="print-page" id="customization-print_button"><h1 id="customization-print_button-adding-a-print-button">Adding a print button<a class="headerlink" href="#customization-print_button-adding-a-print-button" title="Permanent link">&para;</a></h1>
 <p>You might want to customize your site to include a 'print' button on every page (like the one in the right corner of this page 👆)</p>
 <p>MkDocs supports <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir">theme extension</a>, an easy way to override parts of a theme.
 You can use <code>page.url_to_print_page</code> to get the link to the site print page.</p>
-<h2 id="customization-print_button-adding-a-print-button-to-mkdocs-material-theme">Adding a print button to mkdocs-material theme<a class="headerlink"  href="#customization-print_button-adding-a-print-button-to-mkdocs-material-theme" title="Permanent link">&para;</a></h2>
+<h2 id="customization-print_button-adding-a-print-button-to-mkdocs-material-theme">Adding a print button to mkdocs-material theme<a class="headerlink" href="#customization-print_button-adding-a-print-button-to-mkdocs-material-theme" title="Permanent link">&para;</a></h2>
 <p>In <code>mkdocs-material</code> theme (see <a href="https://squidfunk.github.io/mkdocs-material/customization/#overriding-template-blocks">customization</a>), you can create a file for overrides and point to it your <code>mkdocs.yml</code>. You might also want to disable adding the print page to the navigation when you already have a button with the link.</p>
 <p><em>Example</em>:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">mkdocs.yml</label><div class="tabbed-content">
@@ -450,7 +453,6 @@ You can use <code>page.url_to_print_page</code> to get the link to the site prin
     <span class="p p-Indicator">-</span> <span class="nt">print-site</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="nt">add_to_navigation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">docs/overrides/main.html</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
@@ -466,10 +468,9 @@ You can use <code>page.url_to_print_page</code> to get the link to the site prin
 <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-
 </div>
 </div>
-<h2 id="customization-print_button-adding-a-print-button-to-mkdocs-theme">Adding a print button to mkdocs theme<a class="headerlink"  href="#customization-print_button-adding-a-print-button-to-mkdocs-theme" title="Permanent link">&para;</a></h2>
+<h2 id="customization-print_button-adding-a-print-button-to-mkdocs-theme">Adding a print button to mkdocs theme<a class="headerlink" href="#customization-print_button-adding-a-print-button-to-mkdocs-theme" title="Permanent link">&para;</a></h2>
 <p>You can also <a href="https://www.mkdocs.org/user-guide/custom-themes/#creating-a-custom-theme">customize</a> the base mkdocs theme, by creating a file for overrides and pointing to it your <code>mkdocs.yml</code>. You might also want to disable adding the print page to the navigation when you already have a button with the link.</p>
 <p><em>Example</em>:</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">mkdocs.yml</label><div class="tabbed-content">
@@ -481,7 +482,6 @@ You can use <code>page.url_to_print_page</code> to get the link to the site prin
     <span class="p p-Indicator">-</span> <span class="nt">print-site</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="nt">add_to_navigation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">docs/overrides/main.html</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
@@ -498,9 +498,8 @@ You can use <code>page.url_to_print_page</code> to get the link to the site prin
 <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">repo</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-
 </div>
-</div></section><section class="print-page" id="customization-pdf_button"><h1 id="customization-pdf_button-adding-a-pdf-button">Adding a PDF button<a class="headerlink"  href="#customization-pdf_button-adding-a-pdf-button" title="Permanent link">&para;</a></h1>
+</div></section><section class="print-page" id="customization-pdf_button"><h1 id="customization-pdf_button-adding-a-pdf-button">Adding a PDF button<a class="headerlink" href="#customization-pdf_button-adding-a-pdf-button" title="Permanent link">&para;</a></h1>
 <p>You might want to make downloading a PDF even easier for your users. You could include a 'PDF' button on every page (like the one in the right corner of this page 👆)</p>
 <p>MkDocs supports <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir">theme extension</a>, an easy way to override parts of a theme.
 You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page.</p>
@@ -509,7 +508,7 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
 <p>While it might be easier for your users, using this option means you need to manually create the PDF everytime you make a change to your website.</p>
 <p>If you use this option and you are using version control like git, you might want to also <a href="https://git-scm.com/docs/gitignore">gitignore</a> the PDF file.</p>
 </div>
-<h2 id="customization-pdf_button-adding-a-pdf-button-to-mkdocs-material-theme">Adding a PDF button to mkdocs-material theme<a class="headerlink"  href="#customization-pdf_button-adding-a-pdf-button-to-mkdocs-material-theme" title="Permanent link">&para;</a></h2>
+<h2 id="customization-pdf_button-adding-a-pdf-button-to-mkdocs-material-theme">Adding a PDF button to mkdocs-material theme<a class="headerlink" href="#customization-pdf_button-adding-a-pdf-button-to-mkdocs-material-theme" title="Permanent link">&para;</a></h2>
 <p>In <code>mkdocs-material</code> theme (see <a href="https://squidfunk.github.io/mkdocs-material/customization/#overriding-template-blocks">customization</a>), you can create a file for overrides and point to it your <code>mkdocs.yml</code>. You might also want to disable adding the print page to the navigation when you already have a button with the link.</p>
 <p><em>Example</em>:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">mkdocs.yml</label><div class="tabbed-content">
@@ -522,7 +521,6 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
         <span class="p p-Indicator">-</span> <span class="nt">path_to_pdf</span><span class="p">:</span> <span class="s">&quot;assets/the_name_of_your_file.pdf&quot;</span>
         <span class="p p-Indicator">-</span> <span class="nt">add_to_navigation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">docs/overrides/main.html</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
@@ -538,10 +536,9 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
 <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-
 </div>
 </div>
-<h2 id="customization-pdf_button-adding-a-print-button-to-mkdocs-theme">Adding a print button to mkdocs theme<a class="headerlink"  href="#customization-pdf_button-adding-a-print-button-to-mkdocs-theme" title="Permanent link">&para;</a></h2>
+<h2 id="customization-pdf_button-adding-a-print-button-to-mkdocs-theme">Adding a print button to mkdocs theme<a class="headerlink" href="#customization-pdf_button-adding-a-print-button-to-mkdocs-theme" title="Permanent link">&para;</a></h2>
 <p>You can also <a href="https://www.mkdocs.org/user-guide/custom-themes/#creating-a-custom-theme">customize</a> the base mkdocs theme, by creating a file for overrides and pointing to it your <code>mkdocs.yml</code>. You might also want to disable adding the print page to the navigation when you already have a button with the link.</p>
 <p><em>Example</em>:</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">mkdocs.yml</label><div class="tabbed-content">
@@ -554,7 +551,6 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
         <span class="p p-Indicator">-</span> <span class="nt">path_to_pdf</span><span class="p">:</span> <span class="s">&quot;assets/the_name_of_your_file.pdf&quot;</span>
         <span class="p p-Indicator">-</span> <span class="nt">add_to_navigation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">docs/overrides/main.html</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
@@ -571,9 +567,8 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
 <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">repo</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-
 </div>
-</div></section><section class="print-page" id="customization-cover_page"><h1 id="customization-cover_page-customize-the-cover-page">Customize the cover page<a class="headerlink"  href="#customization-cover_page-customize-the-cover-page" title="Permanent link">&para;</a></h1>
+</div></section><section class="print-page" id="customization-cover_page"><h1 id="customization-cover_page-customize-the-cover-page">Customize the cover page<a class="headerlink" href="#customization-cover_page-customize-the-cover-page" title="Permanent link">&para;</a></h1>
 <p>When the <code>add_cover_page</code> option is set to true, <code>mkdocs-print-site-plugin</code> will generate a cover page when printing. This cover page is quite basic, and you might want to customize it.</p>
 <p>You can do that by specifying a custom cover page template in the <code>mkdocs.yml</code> file. This is a standard <a href="https://jinja.palletsprojects.com/en/2.11.x/templates/">jinja2 template</a> file where you can combine HTML and use the information specified in <code>mkdocs.yml</code> as jinja2 variables (see <a href="https://www.mkdocs.org/user-guide/configuration/#project-information">mkdocs project information</a>).</p>
 <p><em>Example</em>:</p>
@@ -583,7 +578,6 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
         <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
         <span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;docs/assets/templates/custom_cover_page.tpl&quot;</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">docs/assets/templates/custom_cover_page.tpl</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">config.site_name</span> <span class="cp">%}</span><span class="x"></span>
@@ -591,14 +585,25 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">&lt;h2&gt;This is my custom print cover page&lt;/h2&gt;</span>
 </code></pre></div>
-
 </div>
 </div>
 <p>As an example, have a look at the default <a href="https://github.com/timvink/mkdocs-print-site-plugin/tree/master/mkdocs_print_site_plugin/templates/cover_page.tpl">cover_page.tpl</a>.</p>
-<h2 id="customization-cover_page-adding-extra-content">Adding extra content<a class="headerlink"  href="#customization-cover_page-adding-extra-content" title="Permanent link">&para;</a></h2>
+<h2 id="customization-cover_page-adding-images">Adding images<a class="headerlink" href="#customization-cover_page-adding-images" title="Permanent link">&para;</a></h2>
+<p>When adding images to your custom cover page template, make sure to define the image source as the hosted image path. The url for the image stored in <code>docs/assets/img/example.png</code> would be <code>/assets/img/example.png</code>.</p>
+<p><em>Example</em>:</p>
+<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">docs/assets/templates/custom_cover_page.tpl</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">config.site_name</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;h1&gt;</span><span class="cp">{{</span> <span class="nv">config.site_name</span> <span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">&lt;img src=&quot;/assets/img/example.png&quot; /&gt;</span>
+</code></pre></div>
+</div>
+</div>
+<p>For a full example have a look at this <a href="https://github.com/timvink/mkdocs-print-site-plugin/blob/master/tests/fixtures/projects/with_markdown_ext/other_cover_page.tpl">custom cover page with an image</a>.</p>
+<h2 id="customization-cover_page-adding-extra-content">Adding extra content<a class="headerlink" href="#customization-cover_page-adding-extra-content" title="Permanent link">&para;</a></h2>
 <p>You might want to add some content to your cover page that's not yet specified in your <code>mkdocs.yml</code> file. Of course you could just hard-code it in your custom template file, but you could also make use of MkDocs's <a href="https://www.mkdocs.org/user-guide/custom-themes/#extra-context">extra context</a> feature, allowing you to use <code>{{ config.extra.&lt;your variable&gt; }}</code></p>
 <p><em>Example</em>:</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">mkdocs.yml</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">mkdocs.yml</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">print-site</span><span class="p">:</span>
         <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -607,21 +612,19 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
 <span class="nt">extra</span><span class="p">:</span>
     <span class="nt">abstract</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a report about a topic</span>
 </code></pre></div>
-
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">docs/assets/templates/custom_cover_page.tpl</label><div class="tabbed-content">
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">docs/assets/templates/custom_cover_page.tpl</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">config.site_name</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">    &lt;h1&gt;</span><span class="cp">{{</span> <span class="nv">config.site_name</span> <span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">&lt;p&gt;</span><span class="cp">{{</span> <span class="nv">config.extra.abstract</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
 </code></pre></div>
-
 </div>
 </div>
-<h2 id="customization-cover_page-change-the-styling">Change the styling<a class="headerlink"  href="#customization-cover_page-change-the-styling" title="Permanent link">&para;</a></h2>
-<p>You'll likely also need to change the styling to your liking. You can add your own CSS file using the <a href="https://www.mkdocs.org/user-guide/configuration/#extra_css">extra_css</a> option from MkDocs. <code>mkdocs-print-site-plugin</code> wraps the cover page in a <code>&lt;section&gt;</code> with id <code>print-site-cover-page</code>. You should use this in your CSS to ensure not affecting other pages.</p>
+<h2 id="customization-cover_page-change-the-styling">Change the styling<a class="headerlink" href="#customization-cover_page-change-the-styling" title="Permanent link">&para;</a></h2>
+<p>You'll likely also want to change the styling to your liking. You can add your own CSS file using the <a href="https://www.mkdocs.org/user-guide/configuration/#extra_css">extra_css</a> option from MkDocs. <code>mkdocs-print-site-plugin</code> wraps the cover page in a <code>&lt;section&gt;</code> with id <code>print-site-cover-page</code>. You should use this in your CSS to ensure not affecting other pages.</p>
 <p><em>Example</em>:</p>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">mkdocs.yml</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">mkdocs.yml</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">print-site</span><span class="p">:</span>
         <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -629,32 +632,30 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
 <span class="nt">extra_css</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docs/assets/css/my_cover_page.css</span>
 </code></pre></div>
-
 </div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">docs/assets/css/my_cover_page.css</label><div class="tabbed-content">
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">docs/assets/css/my_cover_page.css</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">print-site-cover-page</span> <span class="nt">h1</span> <span class="p">{</span>
     <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
-</div></section><h1 class='nav-section-title-end'>Customization</h1><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink"  href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
+</div></section><h1 class='nav-section-title-end'>Customization</h1><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink" href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
 <p>This content is here to demonstrate what it looks like while printing.</p>
-<p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a  href="#print_page">print page</a> and check it out!</p>
-<h2 id="demo_content-links-to-other-pages">Links to other pages<a class="headerlink"  href="#demo_content-links-to-other-pages" title="Permanent link">&para;</a></h2>
+<p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a href="#print_page">print page</a> and check it out!</p>
+<h2 id="demo_content-links-to-other-pages">Links to other pages<a class="headerlink" href="#demo_content-links-to-other-pages" title="Permanent link">&para;</a></h2>
 <p><code>mkdocs-print-site-plugin</code> will fix internal links when combining all the pages into one. Try navigating to other site pages using these internal links:</p>
 <ul>
-<li><a  href="#index">Home</a></li>
-<li><a  href="#options">Options</a></li>
-<li><a  href="#contributing">Contributing</a></li>
+<li><a href="#index">Home</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#contributing">Contributing</a></li>
 </ul>
-<h2 id="demo_content-links-to-other-sections">Links to other sections<a class="headerlink"  href="#demo_content-links-to-other-sections" title="Permanent link">&para;</a></h2>
+<h2 id="demo_content-links-to-other-sections">Links to other sections<a class="headerlink" href="#demo_content-links-to-other-sections" title="Permanent link">&para;</a></h2>
 <p>When combining all pages into one, <code>mkdocs-print-site-plugin</code> will also ensure anchor links keep working (also to anchor links on other pages). Try them out:</p>
 <ul>
-<li><a  href="#demo_content-dummy-section">Dummy section</a> lower down this demo page</li>
-<li>The <a  href="#contributing-manual-testing">Manual Testing</a> in the contributing guide</li>
+<li><a href="#demo_content-dummy-section">Dummy section</a> lower down this demo page</li>
+<li>The <a href="#contributing-manual-testing">Manual Testing</a> in the contributing guide</li>
 </ul>
-<h2 id="demo_content-markdown-extensions">Markdown extensions<a class="headerlink"  href="#demo_content-markdown-extensions" title="Permanent link">&para;</a></h2>
+<h2 id="demo_content-markdown-extensions">Markdown extensions<a class="headerlink" href="#demo_content-markdown-extensions" title="Permanent link">&para;</a></h2>
 <p>MkDocs has support for many markdown extensions (see <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">mkdocs-material reference</a>). Below is a quick showcase so you can see how they print.</p>
 <div class="admonition note">
 <p class="admonition-title">Phasellus posuere in sem ut cursus</p>
@@ -678,19 +679,17 @@ massa, nec semper lorem quam in massa.</p>
             <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
                 <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 </code></pre></div>
-
 <p>Nunc eu odio eleifend, blandit leo a, volutpat sapien. Phasellus posuere in
 sem ut cursus. Nullam sit amet tincidunt ipsum, sit amet elementum turpis.
 Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 </div>
 <details class="note"><summary>Note</summary><p>This is a collapsible block, that is collapsed by default.</p>
 </details>
-<p><a class="md-button"  href="#demo_content-">Example of a button</a></p>
-<p><a class="md-button md-button--primary"  href="#demo_content-">Primary button</a></p>
-<p><a class="md-button md-button--primary"  href="#demo_content-">With icon <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span></a></p>
+<p><a class="md-button" href="#demo_content-">Example of a button</a></p>
+<p><a class="md-button md-button--primary" href="#demo_content-">Primary button</a></p>
+<p><a class="md-button md-button--primary" href="#demo_content-">With icon <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span></a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 </code></pre></div>
-
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -702,14 +701,12 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
                 <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 </code></pre></div>
 </td></tr></table>
-
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
 <span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
 </span><span class="hll">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
 </span>            <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
                 <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 </code></pre></div>
-
 <p>The <code class="highlight"><span class="nb">range</span><span class="p">()</span></code> function is used to generate a sequence of numbers.</p>
 <p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">C</label><div class="tabbed-content">
@@ -720,7 +717,6 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">C++</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
@@ -730,7 +726,6 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 <p>Another tabbed content</p>
@@ -758,7 +753,6 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 * Donec vitae suscipit est
 * Nulla tempor lobortis orci
 </code></pre></div>
-
 <p><em>Result</em>:</p>
 <ul>
 <li>Sed sagittis eleifend rutrum</li>
@@ -772,7 +766,6 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 2. Donec vitae suscipit est
 3. Nulla tempor lobortis orci
 </code></pre></div>
-
 <p><em>Result</em>:</p>
 <ol>
 <li>Sed sagittis eleifend rutrum</li>
@@ -804,7 +797,7 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 </tr>
 </tbody>
 </table>
-<p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref"  href="#demo_content-fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref"  href="#demo_content-fn:2">2</a></sup></p>
+<p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#demo_content-fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#demo_content-fn:2">2</a></sup></p>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 19.2c-2.5 0-4.71-1.28-6-3.2.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.232 7.232 0 01-6 3.2M12 5a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3m0-3A10 10 0 002 12a10 10 0 0010 10 10 10 0 0010-10c0-5.53-4.5-10-10-10z"/></svg></span> – <code>.icons/material/account-circle.svg</code></li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm141.4 389.4c-37.8 37.8-88 58.6-141.4 58.6s-103.6-20.8-141.4-58.6C68.8 359.6 48 309.4 48 256s20.8-103.6 58.6-141.4C144.4 76.8 194.6 56 248 56s103.6 20.8 141.4 58.6c37.8 37.8 58.6 88 58.6 141.4s-20.8 103.6-58.6 141.4zM328 164c-25.7 0-55.9 16.9-59.9 42.1-1.7 11.2 11.5 18.2 19.8 10.8l9.5-8.5c14.8-13.2 46.2-13.2 61 0l9.5 8.5c8.5 7.4 21.6.3 19.8-10.8-3.8-25.2-34-42.1-59.7-42.1zm-160 60c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm194.4 64H133.6c-8.2 0-14.5 7-13.5 15 7.5 59.2 58.9 105 121.1 105h13.6c62.2 0 113.6-45.8 121.1-105 1-8-5.3-15-13.5-15z"/></svg></span> – <code>.icons/fontawesome/regular/laugh-wink.svg</code></li>
@@ -814,7 +807,7 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <li><span class="twemoji facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></span> – Facebook</li>
 </ul>
 <p><img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </p>
-<h3 id="demo_content-images">Images<a class="headerlink"  href="#demo_content-images" title="Permanent link">&para;</a></h3>
+<h3 id="demo_content-images">Images<a class="headerlink" href="#demo_content-images" title="Permanent link">&para;</a></h3>
 <p><code>mkdocs-print-site-plugin</code> supports enumerating figure captions (which can be added easily using the <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">img2fig</a> plugin):</p>
 <figure>
   <img src="https://dummyimage.com/600x400/eee/aaa" width="300" />
@@ -830,7 +823,7 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <p><img alt="" src="https://play-lh.googleusercontent.com/tKuOgQBwDTjhZg3DjCdZVTSVa9X9iMrtrM_1JDH6Ky_YyQeKw_bnFDy0tj1aZ39TDnI=w1440-h620-r" title="Another cat playing" /></p>
 <p><img alt="" src="https://play-lh.googleusercontent.com/4CPahw1_E0b61tZKq4QI1bw_dqR6bYy0aDiNWrn-MCoz9Wq5bNyhKywfVlK01nNKR-A=w1440-h620-r" title="More cats that play" /></p>
 <p><img alt="" src="https://play-lh.googleusercontent.com/5DeXBFITrh81XB68XxvJGvat5bwVj2ELVdSXNb6mGdvohZtnUoUl5kkPLPSrgtN9XHk=w1440-h620-r" title="The internet loves cats" /></p>
-<h3 id="demo_content-lists">Lists<a class="headerlink"  href="#demo_content-lists" title="Permanent link">&para;</a></h3>
+<h3 id="demo_content-lists">Lists<a class="headerlink" href="#demo_content-lists" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis
@@ -883,9 +876,9 @@ Nullam dignissim ultrices urna non auctor.</p>
 <p>The homomorphism <span class="arithmatex">\(f\)</span> is injective if and only if its kernel is only the 
 singleton set <span class="arithmatex">\(e_G\)</span>, because otherwise <span class="arithmatex">\(\exists a,b\in G\)</span> with <span class="arithmatex">\(a\neq b\)</span> such 
 that <span class="arithmatex">\(f(a)=f(b)\)</span>00.</p>
-<h2 id="demo_content-dummy-section">Dummy section<a class="headerlink"  href="#demo_content-dummy-section" title="Permanent link">&para;</a></h2>
+<h2 id="demo_content-dummy-section">Dummy section<a class="headerlink" href="#demo_content-dummy-section" title="Permanent link">&para;</a></h2>
 <p>This section has an incoming anchor link, at the top of this page</p>
-<h2 id="demo_content-some-lorem-ipsum">Some <a href="https://www.lipsum.com/">lorem ipsum</a><a class="headerlink"  href="#demo_content-some-lorem-ipsum" title="Permanent link">&para;</a></h2>
+<h2 id="demo_content-some-lorem-ipsum">Some <a href="https://www.lipsum.com/">lorem ipsum</a><a class="headerlink" href="#demo_content-some-lorem-ipsum" title="Permanent link">&para;</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget mi lacinia arcu ultrices rutrum eget a lacus. Etiam erat mi, sodales at nisl vel, bibendum tempor nunc. Cras in ultrices augue. Cras aliquam in mauris et semper. In hac habitasse platea dictumst. Proin dignissim scelerisque risus, consectetur ornare justo ultrices eu. Quisque tempus, elit eu ullamcorper interdum, metus augue pulvinar lectus, nec dictum mi dolor non turpis. Sed condimentum vulputate pretium.</p>
 <p>Nulla at nisl tortor. Praesent vitae turpis sit amet sem condimentum fermentum eget nec dolor. Maecenas et imperdiet ante, at ultrices orci. Nunc ornare sodales enim. Sed tempor vitae mi et faucibus. Nunc aliquam est sit amet mauris tempus varius. Aenean blandit vel nibh nec sagittis. Sed vehicula nunc a nunc vehicula viverra. Proin risus justo, ullamcorper ac sem a, vulputate ornare justo. Sed facilisis pharetra elit, vitae dignissim nibh iaculis eu. Suspendisse potenti. Curabitur quis arcu ac est faucibus suscipit vel non lacus.</p>
 <p>Ut tincidunt sapien sed sem auctor, et pellentesque erat tristique. Nunc porttitor lacus diam, eu malesuada nibh venenatis in. Donec sit amet enim eget enim facilisis placerat nec eget tortor. Etiam imperdiet, felis ac posuere dignissim, nulla sapien auctor mauris, ac aliquam orci leo nec dui. Donec efficitur turpis quis enim efficitur, eu ornare nisi consectetur. Sed ac arcu at orci pretium lobortis luctus non augue. Duis posuere purus at semper fringilla. Pellentesque facilisis libero vestibulum elit varius iaculis. Donec dapibus pretium scelerisque.</p>
@@ -895,15 +888,15 @@ that <span class="arithmatex">\(f(a)=f(b)\)</span>00.</p>
 <hr />
 <ol>
 <li id="fn:1">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&#160;<a class="footnote-backref"  href="#demo_content-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&#160;<a class="footnote-backref" href="#demo_content-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
 nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#demo_content-fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref" href="#demo_content-fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
-</div></section><section class="print-page" id="contributing"><h1 id="contributing-contribution-guidelines">Contribution Guidelines<a class="headerlink"  href="#contributing-contribution-guidelines" title="Permanent link">&para;</a></h1>
+</div></section><section class="print-page" id="contributing"><h1 id="contributing-contribution-guidelines">Contribution Guidelines<a class="headerlink" href="#contributing-contribution-guidelines" title="Permanent link">&para;</a></h1>
 <p>Thanks for considering to contribute to this project! Some guidelines:</p>
 <ul>
 <li>Go through the issue list and if needed create a relevant issue to discuss the change design. On disagreements, maintainer(s) will have the final word.</li>
@@ -911,31 +904,28 @@ massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref"  href="#
 <li>This package tries to be as simple as possible for the user (hide any complexity from the user). Options are only added when there is clear value to the majority of users.</li>
 <li>When issues or pull requests are not going to be resolved or merged, they should be closed as soon as possible. This is kinder than deciding this after a long period. Our issue tracker should reflect work to be done.</li>
 </ul>
-<h2 id="contributing-unit-tests">Unit Tests<a class="headerlink"  href="#contributing-unit-tests" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-unit-tests">Unit Tests<a class="headerlink" href="#contributing-unit-tests" title="Permanent link">&para;</a></h2>
 <p>Make sure to install an editable version before running tests:</p>
 <div class="highlight"><pre><span></span><code>pip install -r tests/test_requirements.txt
 pip install -e .
 pytest --cov<span class="o">=</span>mkdocs_print_site_plugin --cov-report term-missing tests/
 </code></pre></div>
-
 <p>If it makes sense, writing tests for your PRs is always appreciated and will help get them merged.</p>
 <p>In addition, this project uses <a href="https://pypi.org/project/pyflakes/">pyflakes</a> for static code checking:</p>
 <div class="highlight"><pre><span></span><code>pip install pyflakes
 pyflakes tests/ mkdocs_print_site_plugin/
 </code></pre></div>
-
-<h2 id="contributing-manual-testing">Manual testing<a class="headerlink"  href="#contributing-manual-testing" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-manual-testing">Manual testing<a class="headerlink" href="#contributing-manual-testing" title="Permanent link">&para;</a></h2>
 <p>To quickly serve a website with your latest changes to the plugin use the sites in our tests suite. For example:</p>
 <div class="highlight"><pre><span></span><code>pip install -r tests/test_requirements.txt
 pip install -e .
 mkdocs serve -f tests/fixutures/basic/mkdocs.yml
 </code></pre></div>
-
 <p>Tip: If you use google chrome, you can also view the print version of a page inside the browser <a href="https://www.smashingmagazine.com/2018/05/print-stylesheets-in-2018/">by setting the renderer</a>.</p>
-<h2 id="contributing-code-style">Code Style<a class="headerlink"  href="#contributing-code-style" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-code-style">Code Style<a class="headerlink" href="#contributing-code-style" title="Permanent link">&para;</a></h2>
 <p>Make sure your code <em>roughly</em> follows <a href="https://www.python.org/dev/peps/pep-0008/">PEP-8</a> and keeps things consistent with the rest of the code. I recommended using <a href="https://github.com/psf/black">black</a> to automatically format your code.</p>
 <p>We use google-style docstrings.</p>
-<h2 id="contributing-documentation">Documentation<a class="headerlink"  href="#contributing-documentation" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-documentation">Documentation<a class="headerlink" href="#contributing-documentation" title="Permanent link">&para;</a></h2>
 <p>Is in <code>docs/</code>. To <a href="https://www.mkdocs.org/user-guide/deploying-your-docs/">deploy the docs</a>, run:</p>
 <div class="highlight"><pre><span></span><code>mkdocs gh-deploy
 </code></pre></div></section></div>
@@ -975,8 +965,8 @@ mkdocs serve -f tests/fixutures/basic/mkdocs.yml
       
     </div>
     
-      <script src="assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
@@ -1002,7 +992,7 @@ mkdocs serve -f tests/fixutures/basic/mkdocs.yml
   
         <script type="text/javascript">
         window.addEventListener('load', function () {
-            change_material_theme('default');generate_toc();
+            generate_toc();
         })
         </script>
         </body>

@@ -9,13 +9,14 @@
         <meta name="description" content="MkDocs Plugin allowing your site visitors to *File > Print > Save as PDF* the entire site.">
       
       
+      
         <link rel="canonical" href="https://timvink.github.io/mkdocs-print-site-plugin/contributing.html">
       
       
         <meta name="author" content="Tim Vink">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
@@ -23,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.358818c7.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.f0267088.min.css">
         
           
           
@@ -81,7 +82,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://timvink.github.io/mkdocs-print-site-plugin/" title="mkdocs-print-site-plugin Docs" class="md-header-nav__button md-logo" aria-label="mkdocs-print-site-plugin Docs">
       
@@ -166,7 +169,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://timvink.github.io/mkdocs-print-site-plugin/" title="mkdocs-print-site-plugin Docs" class="md-nav__button md-logo" aria-label="mkdocs-print-site-plugin Docs">
       
@@ -467,20 +472,17 @@
 pip install -e .
 pytest --cov<span class="o">=</span>mkdocs_print_site_plugin --cov-report term-missing tests/
 </code></pre></div>
-
 <p>If it makes sense, writing tests for your PRs is always appreciated and will help get them merged.</p>
 <p>In addition, this project uses <a href="https://pypi.org/project/pyflakes/">pyflakes</a> for static code checking:</p>
 <div class="highlight"><pre><span></span><code>pip install pyflakes
 pyflakes tests/ mkdocs_print_site_plugin/
 </code></pre></div>
-
 <h2 id="manual-testing">Manual testing<a class="headerlink" href="#manual-testing" title="Permanent link">&para;</a></h2>
 <p>To quickly serve a website with your latest changes to the plugin use the sites in our tests suite. For example:</p>
 <div class="highlight"><pre><span></span><code>pip install -r tests/test_requirements.txt
 pip install -e .
 mkdocs serve -f tests/fixutures/basic/mkdocs.yml
 </code></pre></div>
-
 <p>Tip: If you use google chrome, you can also view the print version of a page inside the browser <a href="https://www.smashingmagazine.com/2018/05/print-stylesheets-in-2018/">by setting the renderer</a>.</p>
 <h2 id="code-style">Code Style<a class="headerlink" href="#code-style" title="Permanent link">&para;</a></h2>
 <p>Make sure your code <em>roughly</em> follows <a href="https://www.python.org/dev/peps/pep-0008/">PEP-8</a> and keeps things consistent with the rest of the code. I recommended using <a href="https://github.com/psf/black">black</a> to automatically format your code.</p>
@@ -546,8 +548,8 @@ mkdocs serve -f tests/fixutures/basic/mkdocs.yml
       
     </div>
     
-      <script src="assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
