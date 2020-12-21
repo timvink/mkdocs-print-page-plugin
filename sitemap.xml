@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://timvink.github.io/mkdocs-print-site-plugin/index.html</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://timvink.github.io/mkdocs-print-site-plugin/options.html</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://timvink.github.io/mkdocs-print-site-plugin/customization/print_button.html</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://timvink.github.io/mkdocs-print-site-plugin/customization/pdf_button.html</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://timvink.github.io/mkdocs-print-site-plugin/customization/cover_page.html</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://timvink.github.io/mkdocs-print-site-plugin/customization/do_not_print.html</loc>
+     <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://timvink.github.io/mkdocs-print-site-plugin/demo_content.html</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://timvink.github.io/mkdocs-print-site-plugin/contributing.html</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://timvink.github.io/mkdocs-print-site-plugin/print_page.html</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

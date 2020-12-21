@@ -273,6 +273,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="customization/do_not_print.html" class="md-nav__link">
+      Do not print
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -413,6 +425,7 @@
       <span class="nt">enumerate_figures</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+      <span class="nt">exclude</span><span class="p">:</span>
 </code></pre></div>
 <dl>
 <dt><code>add_to_navigation</code></dt>
@@ -434,9 +447,11 @@
 <dt><code>enumerate_figures</code></dt>
 <dd>Default <code>false</code>. This will add numbering to all figure captions (for example "Figure 1: <caption>"). Works especially well with <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">mkdocs-img2fig-plugin</a>.</dd>
 <dt><code>add_cover_page</code></dt>
-<dd>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a href="#customization-cover_page">Customizing the cover page</a></dd>
+<dd>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a href="#options-customization-cover_page">Customizing the cover page</a></dd>
 <dt><code>cover_page_template</code></dt>
-<dd>Default <code>""</code>. The path to a custom cover page template to use. See <a href="#customization-cover_page">Customizing the cover page</a> for more info.</dd>
+<dd>Default <code>""</code>. The path to a custom cover page template to use. See <a href="#options-customization-cover_page">Customizing the Cover Page</a> for more info.</dd>
+<dt><code>exclude</code></dt>
+<dd>Default is empty. Allows to specify a list of page source paths that should not be included in the print page. See <a href="#options-customization-do_not_print-ignoring-an-entire-page">Do Not Print</a> for more info.</dd>
 </dl></section><h1 class='nav-section-title'>Customization</h1><section class="print-page" id="customization-print_button"><h1 id="customization-print_button-adding-a-print-button">Adding a print button<a class="headerlink" href="#customization-print_button-adding-a-print-button" title="Permanent link">&para;</a></h1>
 <p>You might want to customize your site to include a 'print' button on every page (like the one in the right corner of this page 👆)</p>
 <p>MkDocs supports <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir">theme extension</a>, an easy way to override parts of a theme.
@@ -639,21 +654,71 @@ You can use <code>page.url_to_pdf</code> to get the link to site PDF from a page
 <span class="p">}</span>
 </code></pre></div>
 </div>
-</div></section><h1 class='nav-section-title-end'>Customization</h1><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink" href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
+</div></section><section class="print-page" id="customization-do_not_print"><h1 id="customization-do_not_print-do-not-print">Do not print<a class="headerlink" href="#customization-do_not_print-do-not-print" title="Permanent link">&para;</a></h1>
+<p>You might want to exclude certain parts of you website from the print site page. This can be useful when you don't want to include large images, tables, certain <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions">admonitions</a> or appendixes to your site PDF.</p>
+<h2 id="customization-do_not_print-ignoring-certain-elements-in-a-page">Ignoring certain elements in a page<a class="headerlink" href="#customization-do_not_print-ignoring-certain-elements-in-a-page" title="Permanent link">&para;</a></h2>
+<p><code>mkdocs-print-site-plugin</code> offers the CSS class <code>.print-site-plugin-ignore</code>, that will ignore certain elements.</p>
+<p>The <a href="https://python-markdown.github.io/extensions/attr_list/">Attribute Lists</a> extension, which is part of the standard Markdown library, allows to add HTML attributes and CSS classes to Markdown elements, and can be enabled via <code>mkdocs.yml</code>.</p>
+<p>To apply the <code>.print-site-plugin-ignore</code> class to an element, you can add <code>{: .print-site-plugin-ignore }</code> to many markdown elements, as explained in the <a href="https://python-markdown.github.io/extensions/attr_list/">attr_list docs</a>. <code>attr_list</code> does not support all markdown elements (see <a href="https://python-markdown.github.io/extensions/attr_list/#limitations">limitations</a>), but remember Markdown is a subset of HTML and anything which cannot be expressed in Markdown can always be expressed with raw HTML directly.</p>
+<p><em>Example</em>:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">mkdocs.yml</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">print-site</span>
+
+<span class="nt">markdown_extensions</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">attr_list</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">docs/example.md</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="gh"># Example page</span>
+
+This paragraph is not part of the print site page.
+{: .print-site-plugin-ignore }
+
+![<span class="nt">ignored image</span>](<span class="na">some/path/image.png</span>){: .print-site-plugin-ignore }
+
+You can also use HTML to hide things from printing:
+&lt;span class=&quot;print-site-plugin-ignore&quot;&gt;hello&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+<p class="print-site-plugin-ignore">As another example, this paragraph will not be printed. Go have a look at the <a href="#print_page">print site page</a> and you'll find it missing.</p>
+<h2 id="customization-do_not_print-ignoring-admonitions">Ignoring admonitions<a class="headerlink" href="#customization-do_not_print-ignoring-admonitions" title="Permanent link">&para;</a></h2>
+<p>Adding a class to <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions">admonitions</a> is not supported by <code>attr_list</code>. You can use the <code>.print-site-plugin-ignore</code> class directly on admonitions however:</p>
+<div class="highlight"><pre><span></span><code>!!! info print-site-plugin-ignore
+
+    As an example, this admonition will not be printed. Go have a look at the [print site page](/print_page.html) and you&#39;ll find it missing.
+</code></pre></div>
+<p>Which renders as:</p>
+<div class="admonition info print-site-plugin-ignore">
+<p class="admonition-title">Info</p>
+<p>As an example, this admonition will not be printed. Go have a look at the <a href="#print_page">print site page</a> and you'll find it missing.</p>
+</div>
+<h2 id="customization-do_not_print-ignoring-an-entire-page">Ignoring an entire page<a class="headerlink" href="#customization-do_not_print-ignoring-an-entire-page" title="Permanent link">&para;</a></h2>
+<p>In the plugin configuration in <code>mkdocs.yml</code> you can specify a list of page source paths (one per line) that should not be included in the print page (excluded from processing by this plugin). This can be useful for example to exlude large appendixes that you only want to display on the web version. The source path of a page is relative to your <code>docs/</code> folder. You can also use <a href="https://docs.python.org/3/library/glob.html">globs</a> instead of full source paths. To exclude <code>docs/subfolder/page.md</code> specify in your <code>mkdocs.yml</code> a line under <code>exclude</code>: with <code>- subfolder/page.md</code>. Some examples:</p>
+<div class="highlight"><pre><span></span><code># mkdocs.yml
+plugins:
+  - print-site:
+      exclude:
+        - index.md
+        - subfolder/page.md
+        - another_page.md
+        - folder/*
+</code></pre></div></section><h1 class='nav-section-title-end'>Ended: Customization</h1><section class="print-page" id="demo_content"><h1 id="demo_content-demo-content">Demo Content<a class="headerlink" href="#demo_content-demo-content" title="Permanent link">&para;</a></h1>
 <p>This content is here to demonstrate what it looks like while printing.</p>
-<p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a href="#print_page">print page</a> and check it out!</p>
+<p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a href="#demo_content-print_page">print page</a> and check it out!</p>
 <h2 id="demo_content-links-to-other-pages">Links to other pages<a class="headerlink" href="#demo_content-links-to-other-pages" title="Permanent link">&para;</a></h2>
 <p><code>mkdocs-print-site-plugin</code> will fix internal links when combining all the pages into one. Try navigating to other site pages using these internal links:</p>
 <ul>
-<li><a href="#index">Home</a></li>
-<li><a href="#options">Options</a></li>
-<li><a href="#contributing">Contributing</a></li>
+<li><a href="#demo_content-index">Home</a></li>
+<li><a href="#demo_content-options">Options</a></li>
+<li><a href="#demo_content-contributing">Contributing</a></li>
 </ul>
 <h2 id="demo_content-links-to-other-sections">Links to other sections<a class="headerlink" href="#demo_content-links-to-other-sections" title="Permanent link">&para;</a></h2>
 <p>When combining all pages into one, <code>mkdocs-print-site-plugin</code> will also ensure anchor links keep working (also to anchor links on other pages). Try them out:</p>
 <ul>
 <li><a href="#demo_content-dummy-section">Dummy section</a> lower down this demo page</li>
-<li>The <a href="#contributing-manual-testing">Manual Testing</a> in the contributing guide</li>
+<li>The <a href="#demo_content-contributing-manual-testing">Manual Testing</a> in the contributing guide</li>
 </ul>
 <h2 id="demo_content-markdown-extensions">Markdown extensions<a class="headerlink" href="#demo_content-markdown-extensions" title="Permanent link">&para;</a></h2>
 <p>MkDocs has support for many markdown extensions (see <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">mkdocs-material reference</a>). Below is a quick showcase so you can see how they print.</p>

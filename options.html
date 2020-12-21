@@ -287,6 +287,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="customization/do_not_print.html" class="md-nav__link">
+      Do not print
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -384,6 +396,7 @@
       <span class="nt">enumerate_figures</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+      <span class="nt">exclude</span><span class="p">:</span>
 </code></pre></div>
 <dl>
 <dt><code>add_to_navigation</code></dt>
@@ -407,7 +420,9 @@
 <dt><code>add_cover_page</code></dt>
 <dd>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a href="customization/cover_page.html">Customizing the cover page</a></dd>
 <dt><code>cover_page_template</code></dt>
-<dd>Default <code>""</code>. The path to a custom cover page template to use. See <a href="customization/cover_page.html">Customizing the cover page</a> for more info.</dd>
+<dd>Default <code>""</code>. The path to a custom cover page template to use. See <a href="customization/cover_page.html">Customizing the Cover Page</a> for more info.</dd>
+<dt><code>exclude</code></dt>
+<dd>Default is empty. Allows to specify a list of page source paths that should not be included in the print page. See <a href="customization/do_not_print.html#ignoring-an-entire-page">Do Not Print</a> for more info.</dd>
 </dl>
                 
               
