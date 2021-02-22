@@ -524,23 +524,23 @@
                   </a>
                 
                 
-                <h1 id="demo-content">Demo Content<a class="headerlink" href="#demo-content" title="Permanent link">&para;</a></h1>
+                <h1 id="demo-content">Demo Content<a class="headerlink" href="#demo-content" title="Permanent link">↵</a></h1>
 <p>This content is here to demonstrate what it looks like while printing.</p>
 <p><img alt="👉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f449.svg" title=":point_right:" /> Go ahead and visit the <a href="print_page.html">print page</a> and check it out!</p>
-<h2 id="links-to-other-pages">Links to other pages<a class="headerlink" href="#links-to-other-pages" title="Permanent link">&para;</a></h2>
+<h2 id="links-to-other-pages">Links to other pages<a class="headerlink" href="#links-to-other-pages" title="Permanent link">↵</a></h2>
 <p><code>mkdocs-print-site-plugin</code> will fix internal links when combining all the pages into one. Try navigating to other site pages using these internal links:</p>
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="options.html">Options</a></li>
 <li><a href="contributing.html">Contributing</a></li>
 </ul>
-<h2 id="links-to-other-sections">Links to other sections<a class="headerlink" href="#links-to-other-sections" title="Permanent link">&para;</a></h2>
+<h2 id="links-to-other-sections">Links to other sections<a class="headerlink" href="#links-to-other-sections" title="Permanent link">↵</a></h2>
 <p>When combining all pages into one, <code>mkdocs-print-site-plugin</code> will also ensure anchor links keep working (also to anchor links on other pages). Try them out:</p>
 <ul>
 <li><a href="#dummy-section">Dummy section</a> lower down this demo page</li>
 <li>The <a href="contributing.html#manual-testing">Manual Testing</a> in the contributing guide</li>
 </ul>
-<h2 id="markdown-extensions">Markdown extensions<a class="headerlink" href="#markdown-extensions" title="Permanent link">&para;</a></h2>
+<h2 id="markdown-extensions">Markdown extensions<a class="headerlink" href="#markdown-extensions" title="Permanent link">↵</a></h2>
 <p>MkDocs has support for many markdown extensions (see <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">mkdocs-material reference</a>). Below is a quick showcase so you can see how they print.</p>
 <div class="admonition note">
 <p class="admonition-title">Phasellus posuere in sem ut cursus</p>
@@ -575,11 +575,11 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <p><a class="md-button md-button--primary" href="#">With icon <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span></a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 </code></pre></div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
@@ -634,9 +634,9 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Unordered List</label><div class="tabbed-content">
 <p><em>Example</em>:</p>
-<div class="highlight"><pre><span></span><code>* Sed sagittis eleifend rutrum
-* Donec vitae suscipit est
-* Nulla tempor lobortis orci
+<div class="highlight"><pre><span></span><code><span class="k">*</span> Sed sagittis eleifend rutrum
+<span class="k">*</span> Donec vitae suscipit est
+<span class="k">*</span> Nulla tempor lobortis orci
 </code></pre></div>
 <p><em>Result</em>:</p>
 <ul>
@@ -647,9 +647,9 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Ordered List</label><div class="tabbed-content">
 <p><em>Example</em>:</p>
-<div class="highlight"><pre><span></span><code>1. Sed sagittis eleifend rutrum
-2. Donec vitae suscipit est
-3. Nulla tempor lobortis orci
+<div class="highlight"><pre><span></span><code><span class="k">1.</span> Sed sagittis eleifend rutrum
+<span class="k">2.</span> Donec vitae suscipit est
+<span class="k">3.</span> Nulla tempor lobortis orci
 </code></pre></div>
 <p><em>Result</em>:</p>
 <ol>
@@ -682,7 +682,7 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 </tr>
 </tbody>
 </table>
-<p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>Footnotes in a text: Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 19.2c-2.5 0-4.71-1.28-6-3.2.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.232 7.232 0 01-6 3.2M12 5a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3m0-3A10 10 0 002 12a10 10 0 0010 10 10 10 0 0010-10c0-5.53-4.5-10-10-10z"/></svg></span> – <code>.icons/material/account-circle.svg</code></li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm141.4 389.4c-37.8 37.8-88 58.6-141.4 58.6s-103.6-20.8-141.4-58.6C68.8 359.6 48 309.4 48 256s20.8-103.6 58.6-141.4C144.4 76.8 194.6 56 248 56s103.6 20.8 141.4 58.6c37.8 37.8 58.6 88 58.6 141.4s-20.8 103.6-58.6 141.4zM328 164c-25.7 0-55.9 16.9-59.9 42.1-1.7 11.2 11.5 18.2 19.8 10.8l9.5-8.5c14.8-13.2 46.2-13.2 61 0l9.5 8.5c8.5 7.4 21.6.3 19.8-10.8-3.8-25.2-34-42.1-59.7-42.1zm-160 60c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm194.4 64H133.6c-8.2 0-14.5 7-13.5 15 7.5 59.2 58.9 105 121.1 105h13.6c62.2 0 113.6-45.8 121.1-105 1-8-5.3-15-13.5-15z"/></svg></span> – <code>.icons/fontawesome/regular/laugh-wink.svg</code></li>
@@ -692,7 +692,7 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <li><span class="twemoji facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></span> – Facebook</li>
 </ul>
 <p><img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </p>
-<h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
+<h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">↵</a></h3>
 <p><code>mkdocs-print-site-plugin</code> supports enumerating figure captions (which can be added easily using the <a href="https://github.com/stuebersystems/mkdocs-img2fig-plugin">img2fig</a> plugin):</p>
 <figure>
   <img src="https://dummyimage.com/600x400/eee/aaa" width="300" />
@@ -708,7 +708,7 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
 <p><img alt="" src="https://play-lh.googleusercontent.com/tKuOgQBwDTjhZg3DjCdZVTSVa9X9iMrtrM_1JDH6Ky_YyQeKw_bnFDy0tj1aZ39TDnI=w1440-h620-r" title="Another cat playing" /></p>
 <p><img alt="" src="https://play-lh.googleusercontent.com/4CPahw1_E0b61tZKq4QI1bw_dqR6bYy0aDiNWrn-MCoz9Wq5bNyhKywfVlK01nNKR-A=w1440-h620-r" title="More cats that play" /></p>
 <p><img alt="" src="https://play-lh.googleusercontent.com/5DeXBFITrh81XB68XxvJGvat5bwVj2ELVdSXNb6mGdvohZtnUoUl5kkPLPSrgtN9XHk=w1440-h620-r" title="The internet loves cats" /></p>
-<h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
+<h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">↵</a></h3>
 <ol>
 <li>
 <p>Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis
@@ -761,9 +761,9 @@ Nullam dignissim ultrices urna non auctor.</p>
 <p>The homomorphism <span class="arithmatex">\(f\)</span> is injective if and only if its kernel is only the 
 singleton set <span class="arithmatex">\(e_G\)</span>, because otherwise <span class="arithmatex">\(\exists a,b\in G\)</span> with <span class="arithmatex">\(a\neq b\)</span> such 
 that <span class="arithmatex">\(f(a)=f(b)\)</span>00.</p>
-<h2 id="dummy-section">Dummy section<a class="headerlink" href="#dummy-section" title="Permanent link">&para;</a></h2>
+<h2 id="dummy-section">Dummy section<a class="headerlink" href="#dummy-section" title="Permanent link">↵</a></h2>
 <p>This section has an incoming anchor link, at the top of this page</p>
-<h2 id="some-lorem-ipsum">Some <a href="https://www.lipsum.com/">lorem ipsum</a><a class="headerlink" href="#some-lorem-ipsum" title="Permanent link">&para;</a></h2>
+<h2 id="some-lorem-ipsum">Some <a href="https://www.lipsum.com/">lorem ipsum</a><a class="headerlink" href="#some-lorem-ipsum" title="Permanent link">↵</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget mi lacinia arcu ultrices rutrum eget a lacus. Etiam erat mi, sodales at nisl vel, bibendum tempor nunc. Cras in ultrices augue. Cras aliquam in mauris et semper. In hac habitasse platea dictumst. Proin dignissim scelerisque risus, consectetur ornare justo ultrices eu. Quisque tempus, elit eu ullamcorper interdum, metus augue pulvinar lectus, nec dictum mi dolor non turpis. Sed condimentum vulputate pretium.</p>
 <p>Nulla at nisl tortor. Praesent vitae turpis sit amet sem condimentum fermentum eget nec dolor. Maecenas et imperdiet ante, at ultrices orci. Nunc ornare sodales enim. Sed tempor vitae mi et faucibus. Nunc aliquam est sit amet mauris tempus varius. Aenean blandit vel nibh nec sagittis. Sed vehicula nunc a nunc vehicula viverra. Proin risus justo, ullamcorper ac sem a, vulputate ornare justo. Sed facilisis pharetra elit, vitae dignissim nibh iaculis eu. Suspendisse potenti. Curabitur quis arcu ac est faucibus suscipit vel non lacus.</p>
 <p>Ut tincidunt sapien sed sem auctor, et pellentesque erat tristique. Nunc porttitor lacus diam, eu malesuada nibh venenatis in. Donec sit amet enim eget enim facilisis placerat nec eget tortor. Etiam imperdiet, felis ac posuere dignissim, nulla sapien auctor mauris, ac aliquam orci leo nec dui. Donec efficitur turpis quis enim efficitur, eu ornare nisi consectetur. Sed ac arcu at orci pretium lobortis luctus non augue. Duis posuere purus at semper fringilla. Pellentesque facilisis libero vestibulum elit varius iaculis. Donec dapibus pretium scelerisque.</p>

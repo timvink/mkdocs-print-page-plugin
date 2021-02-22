@@ -8,8 +8,7 @@ Only called when print-site-plugin option 'add_table_of_contents' is set to true
 */
 function generate_toc() {
 
-  var ToC = "<nav role='navigation' class='print-page-toc-nav'>" +
-      "<h1 class='print-page-toc-title'>Table of Contents</h1>"
+  var ToC = ""
 
   var newLine, el, title, link;
 
@@ -26,6 +25,9 @@ function generate_toc() {
   var current_heading_depth = 0;
   var current_section_depth = 0;
   var inserted_padding_row = false;
+
+  // Extract table of contents depth
+  var toc_depth = document.getElementById("print-page-toc").getAttribute("data-toc-depth")
 
   for (var i = 0; i < toc_elements.length; i++) {
     
@@ -63,6 +65,11 @@ function generate_toc() {
     tag = el.tagName
     tag_level = tag.substring(1)
 
+    // print-site-plugin has a setting to control TOC depth
+    if ( tag_level > toc_depth ) {
+      continue;
+    }
+
     while (tag_level > current_heading_depth) {
       current_heading_depth++;
       ToC += "<ul class='print-site-toc-level-" + current_heading_depth + "'>";
@@ -97,10 +104,8 @@ function generate_toc() {
 
   };
 
-  ToC +=
-    "</ul>" +
-    "</nav>";
+  ToC += "</ul>"
 
-    document.querySelectorAll("#print-page-toc")[0].innerHTML = ToC;
+  document.querySelectorAll("#print-page-toc nav")[0].insertAdjacentHTML("beforeend", ToC);
 
 }

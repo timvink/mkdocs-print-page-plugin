@@ -1,9 +1,9 @@
 
-         // Subscribe functions for compatibility 
+         // Subscribe functions for compatibility
          // with mkdocs-material's instant loading feature
                     
          if (
-            typeof app !== "undefined" && 
+            typeof app !== "undefined" &&
             typeof app.document$ !== "undefined"
             ) {
             app.document$.subscribe(function() {

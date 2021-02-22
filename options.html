@@ -384,18 +384,23 @@
                   </a>
                 
                 
-                <h1 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h1>
-<p>You can customize the plugin by setting options in <code>mkdocs.yml</code>. This site uses the following settings:</p>
+                <h1 id="options">Options<a class="headerlink" href="#options" title="Permanent link">↵</a></h1>
+<p>You can customize <code>mkdocs-print-site-plugin</code> in your <code>mkdocs.yml</code> with the following settings:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">print-site</span><span class="p">:</span>
       <span class="nt">add_to_navigation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">print_page_title</span><span class="p">:</span> <span class="s">&#39;Print</span><span class="nv"> </span><span class="s">Site&#39;</span>
+      <span class="c1"># Table of contents</span>
       <span class="nt">add_table_of_contents</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">toc_title</span><span class="p">:</span> <span class="s">&#39;Table</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Contents&#39;</span>
+      <span class="nt">toc_depth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+      <span class="c1"># Content-related</span>
       <span class="nt">add_full_urls</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
       <span class="nt">enumerate_headings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">enumerate_figures</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">add_cover_page</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">cover_page_template</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+      <span class="nt">path_to_pdf</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
       <span class="nt">exclude</span><span class="p">:</span>
 </code></pre></div>
 <dl>
@@ -405,6 +410,10 @@
 <dd>Default is <code>'Print Site'</code>. When <code>add_to_navigation</code> is set to <code>true</code> this setting controls the name of the print page in the navigation of the site. This setting is ignored when <code>add_to_navigation</code> is set to <code>false</code>.</dd>
 <dt><code>add_table_of_contents</code></dt>
 <dd>Default is <code>true</code>. Adds a table of contents section at the beginning of the print page.</dd>
+<dt><code>toc_title</code></dt>
+<dd>Default is <code>'Table of Contents'</code>. When <code>add_table_of_contents</code> is set to <code>true</code> this setting controls the name of the table of contents. This setting is ignored when <code>add_table_of_contents</code> is set to <code>false</code>.</dd>
+<dt><code>toc_depth</code></dt>
+<dd>Default is <code>6</code>. When <code>add_table_of_contents</code> is set to <code>true</code> this setting controls the depth of the table of contents. This setting is ignored when <code>add_table_of_contents</code> is set to <code>false</code>.</dd>
 <dt><code>add_full_urls</code></dt>
 <dd>
 <p>Default is <code>false</code>. When printing a page, you cannot see the target of a link. This option adds the target url in parenthesis behind a link.</p>
@@ -421,6 +430,12 @@
 <dd>Default <code>false</code>. When enabled, a cover page is added to the print page, displaying the <code>site_title</code> and other information from the <code>mkdocs.yml</code> file. See also <a href="customization/cover_page.html">Customizing the cover page</a></dd>
 <dt><code>cover_page_template</code></dt>
 <dd>Default <code>""</code>. The path to a custom cover page template to use. See <a href="customization/cover_page.html">Customizing the Cover Page</a> for more info.</dd>
+<dt><code>add_print_site_banner</code></dt>
+<dd>Default <code>true</code>. When enabled, a banner is added to the top of the print page, explaining to users the current page contains all site pages.</dd>
+<dt><code>print_site_banner_template</code></dt>
+<dd>Default <code>""</code>. The path to a custom print site banner template to use. See <a href="customization/banner.html">Customizing the print site banner</a> for more info.</dd>
+<dt><code>path_to_pdf</code></dt>
+<dd>Default is empty. Option to make it easier to add a link to the PDF version of the site on each page. See <a href="customization/pdf_button.html">Adding a PDF button</a> for more info.</dd>
 <dt><code>exclude</code></dt>
 <dd>Default is empty. Allows to specify a list of page source paths that should not be included in the print page. See <a href="customization/do_not_print.html#ignoring-an-entire-page">Do Not Print</a> for more info.</dd>
 </dl>

@@ -458,9 +458,9 @@
                   </a>
                 
                 
-                <h1 id="do-not-print">Do not print<a class="headerlink" href="#do-not-print" title="Permanent link">&para;</a></h1>
+                <h1 id="do-not-print">Do not print<a class="headerlink" href="#do-not-print" title="Permanent link">↵</a></h1>
 <p>You might want to exclude certain parts of you website from the print site page. This can be useful when you don't want to include large images, tables, certain <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions">admonitions</a> or appendixes to your site PDF.</p>
-<h2 id="ignoring-certain-elements-in-a-page">Ignoring certain elements in a page<a class="headerlink" href="#ignoring-certain-elements-in-a-page" title="Permanent link">&para;</a></h2>
+<h2 id="ignoring-certain-elements-in-a-page">Ignoring certain elements in a page<a class="headerlink" href="#ignoring-certain-elements-in-a-page" title="Permanent link">↵</a></h2>
 <p><code>mkdocs-print-site-plugin</code> offers the CSS class <code>.print-site-plugin-ignore</code>, that will ignore certain elements.</p>
 <p>The <a href="https://python-markdown.github.io/extensions/attr_list/">Attribute Lists</a> extension, which is part of the standard Markdown library, allows to add HTML attributes and CSS classes to Markdown elements, and can be enabled via <code>mkdocs.yml</code>.</p>
 <p>To apply the <code>.print-site-plugin-ignore</code> class to an element, you can add <code>{: .print-site-plugin-ignore }</code> to many markdown elements, as explained in the <a href="https://python-markdown.github.io/extensions/attr_list/">attr_list docs</a>. <code>attr_list</code> does not support all markdown elements (see <a href="https://python-markdown.github.io/extensions/attr_list/#limitations">limitations</a>), but remember Markdown is a subset of HTML and anything which cannot be expressed in Markdown can always be expressed with raw HTML directly.</p>
@@ -487,18 +487,18 @@ You can also use HTML to hide things from printing:
 </div>
 </div>
 <p class="print-site-plugin-ignore">As another example, this paragraph will not be printed. Go have a look at the <a href="/print_page.html">print site page</a> and you'll find it missing.</p>
-<h2 id="ignoring-admonitions">Ignoring admonitions<a class="headerlink" href="#ignoring-admonitions" title="Permanent link">&para;</a></h2>
+<h2 id="ignoring-admonitions">Ignoring admonitions<a class="headerlink" href="#ignoring-admonitions" title="Permanent link">↵</a></h2>
 <p>Adding a class to <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions">admonitions</a> is not supported by <code>attr_list</code>. You can use the <code>.print-site-plugin-ignore</code> class directly on admonitions however:</p>
 <div class="highlight"><pre><span></span><code>!!! info print-site-plugin-ignore
 
-    As an example, this admonition will not be printed. Go have a look at the [print site page](/print_page.html) and you&#39;ll find it missing.
+    As an example, this admonition will not be printed. Go have a look at the [<span class="nt">print site page</span>](<span class="na">/print_page.html</span>) and you&#39;ll find it missing.
 </code></pre></div>
 <p>Which renders as:</p>
 <div class="admonition info print-site-plugin-ignore">
 <p class="admonition-title">Info</p>
 <p>As an example, this admonition will not be printed. Go have a look at the <a href="/print_page.html">print site page</a> and you'll find it missing.</p>
 </div>
-<h2 id="ignoring-an-entire-page">Ignoring an entire page<a class="headerlink" href="#ignoring-an-entire-page" title="Permanent link">&para;</a></h2>
+<h2 id="ignoring-an-entire-page">Ignoring an entire page<a class="headerlink" href="#ignoring-an-entire-page" title="Permanent link">↵</a></h2>
 <p>In the plugin configuration in <code>mkdocs.yml</code> you can specify a list of page source paths (one per line) that should not be included in the print page (excluded from processing by this plugin). This can be useful for example to exlude large appendixes that you only want to display on the web version. The source path of a page is relative to your <code>docs/</code> folder. You can also use <a href="https://docs.python.org/3/library/glob.html">globs</a> instead of full source paths. To exclude <code>docs/subfolder/page.md</code> specify in your <code>mkdocs.yml</code> a line under <code>exclude</code>: with <code>- subfolder/page.md</code>. Some examples:</p>
 <div class="highlight"><pre><span></span><code># mkdocs.yml
 plugins:
