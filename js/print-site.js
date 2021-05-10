@@ -24,28 +24,28 @@ function generate_toc() {
   
   var current_heading_depth = 0;
   var current_section_depth = 0;
-  var inserted_padding_row = false;
+  // var inserted_padding_row = false;
 
   // Extract table of contents depth
   var toc_depth = document.getElementById("print-page-toc").getAttribute("data-toc-depth")
 
   for (var i = 0; i < toc_elements.length; i++) {
     
-
+    // Get the info from the element
     el = toc_elements[i]
-
-    // If the section pages end
-    if ( el.classList.contains('nav-section-title-end') ) {
-      current_section_depth--;
-      // Add some padding, but make sure not twice in a row
-      // That can happen with nested sections going back up 2 levels
-      if (inserted_padding_row == false ) {
-        ToC += "<li style='list-style-type: none; padding-bottom: 1em;'></li>"
-        inserted_padding_row = true;
-      }
+    link = "#" + el.id;
+    tag = el.tagName
+    tag_level = tag.substring(1)
+    // Get the text of a heading
+    // We use .firstChild.nodeValue instead of .innerText
+    // because of elements like:
+    // <h1 id="index-mkdocs-print-site-plugin">
+    //     mkdocs-print-site-plugin<a class="headerlink" href="#index-mkdocs-print-site-plugin" title="Permanent link">↵</a>
+    //  </h1>
+    title = el.firstChild.nodeValue;
+    if ( title.length == 0 ) {
       continue;
     }
-    inserted_padding_row = false;
 
     // Don't put the toc h1 in the toc
     if ( el.classList.contains('print-page-toc-title') ) {
@@ -56,17 +56,61 @@ function generate_toc() {
       continue;
     }
 
-    title = el.innerText;
-    if ( title.length == 0 ) {
+    // print-site-plugin has a setting to control TOC depth
+    if ( tag_level > toc_depth ) {
       continue;
     }
 
-    link = "#" + el.id;
-    tag = el.tagName
-    tag_level = tag.substring(1)
+  
 
-    // print-site-plugin has a setting to control TOC depth
-    if ( tag_level > toc_depth ) {
+    // // If the section pages end
+    // if ( el.classList.contains('nav-section-title-end') ) {
+    //   current_section_depth--;
+    //   // Add some padding, but make sure not twice in a row
+    //   // That can happen with nested sections going back up 2 levels
+    //   if (inserted_padding_row == false ) {
+    //     ToC += "</div>"; // end section.
+    //     ToC += "<li style='list-style-type: none; padding-bottom: 1em;'></li>";
+    //     inserted_padding_row = true;
+    //   }
+    //   continue;
+    // }
+    // inserted_padding_row = false;
+
+    if (el.classList.contains('nav-section-title') ) {
+
+
+      // Use the tag level of the first item in the section to close off any nested <ul>
+      el = toc_elements[i+1]
+      link = "#" + el.id;
+      tag = el.tagName
+      tag_level = tag.substring(1)
+      while (tag_level > current_heading_depth) {
+        current_heading_depth++;
+        ToC += "<ul class='print-site-toc-level-" + current_heading_depth + "'>";
+      }
+      while (tag_level < current_heading_depth) {
+        current_heading_depth--;
+        ToC += "</ul>"; 
+      }
+
+      // Insert a section heading <li> item, however deeply we are nested.
+      current_section_depth++;
+      // Insert item as a section title in the current list
+      ToC += "<li class='toc-nav-section-title toc-nav-section-title-level-" + (current_section_depth) + "'>" + title + "</li>";
+      
+      // Start a new ul for the section
+      ToC += "<ul class='print-site-toc-level-" + current_heading_depth + " toc-section-line-border'>";
+      continue;
+    }
+
+
+    if (el.classList.contains('nav-section-title-end') ) {
+
+      current_section_depth--;
+      // Close the special section ul
+      ToC += "</ul>";
+
       continue;
     }
 
@@ -79,26 +123,12 @@ function generate_toc() {
       ToC += "</ul>"; 
     }
 
-    if ( el.classList.contains('nav-section-title') ) {
-      // newLine = "<li class='toc-nav-section-title'>" + title + "</li>"; 
-      current_section_depth++;
-      newLine = "<li class='toc-nav-section-title toc-nav-section-title-level-" + current_section_depth + "' style='margin-left: " + (current_section_depth-1) + "em'>" + title + "</li>"; 
-    } else {
 
-      if ( current_section_depth >= 1) {
-        a_class = " class='toc-nav-section-child' style='margin-left: " + (current_section_depth-1) + "em'"
-      } else {
-        a_class = ""
-      }
-
-      newLine =
-        "<li" + a_class + ">" +
-          "<a href='" + link + "'>" +
-            title +
-          "</a>" +
-        "</li>";
-    }
-
+    newLine = "<li>" +
+      "<a href='" + link + "'>" +
+        title +
+      "</a>" +
+    "</li>";
 
     ToC += newLine;
 
